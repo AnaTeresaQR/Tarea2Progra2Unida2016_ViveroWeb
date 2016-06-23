@@ -1,0 +1,17 @@
+.formClass {
+    float: left;
+    text-align: center;
+    background: mediumaquamarine;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 28%;
+    margin-right: 35%;
+    width: 35%;
+    border: 10px solid darkgreen;
+    outline: 8px solid green;
+}
+
+label {
+    display: block;
+    margin: .5em 0 0 0;
+}

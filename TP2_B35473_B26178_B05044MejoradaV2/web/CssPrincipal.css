@@ -1,0 +1,111 @@
+body {
+
+    background-image: url("img/fengshui.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+
+}
+#content {
+    background: white;
+    text-align: center;
+    top: 25%; 
+    bottom: 18%;
+    width: 25%;  
+    margin-left: 37%;
+    margin-right: 15%;
+    outline: 5px solid slategrey;
+    padding: 0;
+    position: fixed;
+}
+
+#header {
+    position: fixed;
+    width: 97.2%;
+    height: 12%;
+    background: thistle;
+    top: 8px;
+    border: 10px solid darkblue;
+    outline: 5px solid darkcyan;
+    background-image: url("img/fondoHeader.jpg");
+    background-repeat: round;
+    
+}
+
+#imageLogo {
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 3.5px;
+    top: 8px;
+    background: white;
+}
+
+#tittle {  
+    text-align: center;
+    font-style: oblique;
+}
+#menus {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    position: absolute;
+    background: palegreen;
+    top: 150px;
+    border: 8px solid darkgreen;
+    outline: 5px solid green;
+    padding: 15px;  
+    left: 10px;
+}
+
+.menu {
+    background-color: teal;
+    width: fit-content;
+    color: white;
+    margin-top:13%;
+    padding:  16px;
+    text-decoration: none;
+}
+
+
+#footer {
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 98.6%;
+    height: 12%;
+    position: fixed;
+    bottom: 0; 
+    background: transparent;
+}
+
+#linksFooter {
+    background: transparent;
+    position: fixed;
+    padding: 0;
+    margin: 2px;
+    bottom: 0;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+#global {
+    margin-top: 10%;
+    margin-left: 25%;
+    height: 480px;
+    width: 700px;
+    border: 5px solid #009999;
+    background: #f1f1f1;
+    overflow-y: scroll;
+}
+
+#top10 {
+    height: 60%;
+}
+
+.products {
+    padding:4px;
+    background:#fff;
+}
