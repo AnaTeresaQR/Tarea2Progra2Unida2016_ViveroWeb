@@ -1,6 +1,4 @@
-<menu class="menu" id="userMenu" >
-    <a id="newAccount"> crear cuenta</a>
-    </br>
-    </br>
-    <a id="startSesion"> iniciar sesion</a>
+<menu class="menu" >
+    <li><a href="" id="createAccount"> crear cuenta</a></li>
+    <li><a href="UserLogin.jsp"  id="startSesion"> iniciar sesion</a></li>
 </menu>

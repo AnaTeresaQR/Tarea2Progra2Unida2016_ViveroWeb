@@ -4,9 +4,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <link href="../cssPrincipalViews/FormCss.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="Registerjs/javaScriptJQueryMethod.js"></script>
-        <script type="text/javascript" src="Registerjs/ValidateObjAttributes.js"></script>
+        <link href="../FormCss.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="../javaScriptJQueryMethod.js"></script>
+        <script type="text/javascript" src="../ValidateObjAttributes.js"></script>
         <title>Login Administrador</title>
     </head>
     <body>

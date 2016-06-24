@@ -1,0 +1,3 @@
+SELECT * FROM registeruser;
+-- INSERT INTO registeruser (id, userName, lastName, schedule, telephone, email, password) values(default, 'Ana Teresa', 'Quesada Ramírez', '207410170', '87518238', 'ana@gmail.com', 'Ana123');
+-- INSERT INTO registeruser (id, userName, lastName, schedule, telephone, email, password) values(default, 'Edgardo', 'Quirós', '207440333', '87878787', 'edgardo@gmail.com', 'Edgardo123');

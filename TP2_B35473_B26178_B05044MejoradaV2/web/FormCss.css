@@ -3,10 +3,11 @@
     text-align: center;
     background: mediumaquamarine;
     position: absolute;
-    margin-top: 10%;
+    margin-top: 13%;
     margin-left: 28%;
     margin-right: 35%;
     width: 35%;
+    height: fit-content;
     border: 10px solid darkgreen;
     outline: 8px solid green;
 }

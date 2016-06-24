@@ -10,7 +10,7 @@
 
     Product p = mx.getProductById(id);
     session.setAttribute("productSession", p);
-    
+
     response.sendRedirect("ShowProduct.jsp");
 %>
 

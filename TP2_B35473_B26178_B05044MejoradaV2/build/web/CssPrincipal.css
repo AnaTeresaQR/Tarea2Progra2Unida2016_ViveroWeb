@@ -21,7 +21,7 @@ body {
 #header {
     position: fixed;
     width: 97.2%;
-    height: 12%;
+    height: 15%;
     background: thistle;
     top: 8px;
     border: 10px solid darkblue;
@@ -57,15 +57,29 @@ body {
     left: 10px;
 }
 
+#userMenu {
+    float: right;
+    display: inline-block;
+    width: 15%;
+    position: absolute;
+    background: palegreen;
+    top: 150px;
+    border: 8px solid darkgreen;
+    outline: 5px solid green;
+    padding: 15px; 
+    right: 10px;
+}
+
+a {
+    color: black;
+}
+
 .menu {
     background-color: teal;
     width: fit-content;
-    color: white;
-    margin-top:13%;
+    margin-top: 13%;
     padding:  16px;
-    text-decoration: none;
 }
-
 
 #footer {
     position: absolute;
@@ -92,10 +106,10 @@ textarea {
 }
 
 #global {
-    margin-top: 10%;
-    margin-left: 25%;
-    height: 380px;
-    width: 700px;
+    margin-top: 11.3%;
+    margin-left: 21%;
+    height: 400px;
+    width: 732px;
     border: 5px solid #009999;
     background: #f1f1f1;
     overflow-y: scroll;
@@ -111,8 +125,10 @@ textarea {
 }
 
 #account {
-    margin-top: 10%;
-    width: 60px;
-    height: 10px;
-    background: ghostwhite;
+    color: white;
+    background: #009999;
+    margin-right:3%;
+    margin-left: 76%;
+    width: fit-content;
+    height: 18%;
 }
