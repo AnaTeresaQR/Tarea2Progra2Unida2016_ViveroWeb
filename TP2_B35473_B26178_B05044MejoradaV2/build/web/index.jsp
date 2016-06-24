@@ -1,14 +1,15 @@
 
 <%@page import="objectModel.UserModel" %> 
-<%@include file="header.jsp" %>    
+<%@include file="header.jsp" %> 
 
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
 
     <%@include file="CategoryMenu.jsp"%>
 </div>
+
 <div   id="userMenu" >
-    <%@include file="userMenu.jsp"%>
+    <%@include file="SessionMenu.jsp" %>
 </div>
 
 <%@include file="ContentTop10.jsp"%>
