@@ -23,6 +23,9 @@ public class Product {
     private int productsSold;
     private int productsForSell;
 
+    public Product() {
+    }
+
     public Product(String name, String plantId, String urlPicture1, String urlPicture2, String urlPicture3, String category, String shortDescription, String longDescription, double price, int plantsSold, int plantsForSell) {
         this.name = name;
         this.prodcutId = plantId;

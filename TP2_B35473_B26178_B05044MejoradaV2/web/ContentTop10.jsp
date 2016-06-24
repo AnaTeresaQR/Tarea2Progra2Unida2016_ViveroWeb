@@ -14,12 +14,12 @@
                 Product product = plantsList.get(i);
         %>
         <div class="products">
-            <a href="ShowProduct.jsp?id=<%=product.getProductId()%>"><%=product.getName()%></a>
+            <a href="ShowProductController.jsp?id=<%=product.getProductId()%>"><%=product.getName()%></a>
             <p id="shortDescription"> Descripcion= <%=product.getShortDescription()%> </p>        
             <p id="price"> Precio= <%=product.getPrice()%> </p>
-            <a href="ShowProduct.jsp?id=<%=product.getProductId()%>"><img src="<%= product.getUrlPicture1()%>" width="250" height="180" alt="top"></a>
+            <a href="ShowProductController.jsp?id=<%=product.getProductId()%>"><img src="<%= product.getUrlPicture1()%>" width="250" height="180" alt="top"></a>
             <br>
-            <a href="ShowProduct.jsp?id=<%=product.getProductId()%>">Ver producto</a>
+            <a href="ShowProductController.jsp?id=<%=product.getProductId()%>">Ver producto</a>
         </div>
         <%
             }

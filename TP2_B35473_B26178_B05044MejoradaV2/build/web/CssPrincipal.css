@@ -28,7 +28,7 @@ body {
     outline: 5px solid darkcyan;
     background-image: url("img/fondoHeader.jpg");
     background-repeat: round;
-    
+
 }
 
 #imageLogo {
@@ -94,7 +94,7 @@ textarea {
 #global {
     margin-top: 10%;
     margin-left: 25%;
-    height: 480px;
+    height: 380px;
     width: 700px;
     border: 5px solid #009999;
     background: #f1f1f1;
@@ -108,4 +108,11 @@ textarea {
 .products {
     padding:4px;
     background:#fff;
+}
+
+#account {
+    margin-top: 10%;
+    width: 60px;
+    height: 10px;
+    background: ghostwhite;
 }
