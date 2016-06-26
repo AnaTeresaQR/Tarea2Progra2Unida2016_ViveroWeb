@@ -30,7 +30,7 @@
             }
         %>
 
-        <a href="../index.jsp">Inicio</a>
+        <a href="index.jsp">Inicio</a>
 
     </body>
 </html>
