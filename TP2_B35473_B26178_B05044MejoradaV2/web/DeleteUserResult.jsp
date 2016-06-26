@@ -27,21 +27,14 @@
             } else {
                 result = false;
             }
-
-            String resultDelete = "";
             if (result) {
-                resultDelete += " EXITOSA ";
                 session.removeAttribute("user");
                 session.invalidate();
-                //response.sendRedirect("index.jsp");
+                response.sendRedirect("index.jsp");
             } else {
-                resultDelete += " FALLIDA, lo sentimos por favor intente de nuevo";
+                session.setAttribute("msj", "FALLIDA, lo sentimos por favor intente de nuevo");
+                response.sendRedirect("DeleteUser.jsp");
             }
         %>
-
-        <p>
-            El resultado de borrar su cuenta fue <%=resultDelete%>
-        </p>
-        <a href="../index.jsp">Inicio</a>
     </body>
 </html>

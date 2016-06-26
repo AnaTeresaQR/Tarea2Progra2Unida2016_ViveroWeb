@@ -30,8 +30,6 @@
             }
         %>
 
-        <a href="index.jsp">Inicio</a>
-
     </body>
 </html>
 
