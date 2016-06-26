@@ -15,6 +15,7 @@
         <br><br/>
         <input  type="submit" value="Ingresar"/>
         <input type="reset" value="Vaciar Campos"/>
+        <br><br/>
     </form>
 
 </div>
