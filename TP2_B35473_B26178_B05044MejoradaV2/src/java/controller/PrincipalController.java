@@ -1,8 +1,6 @@
 package controller;
 
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import objectModel.UserModel;
 
 /**
@@ -12,16 +10,19 @@ import objectModel.UserModel;
 public class PrincipalController {
 
     private UserModel userModel;
-    
+
     public boolean existEmail(String email) {
+        userModel = new UserModel();
         try {
-            return userModel.existEmail(email);
+            boolean value = userModel.existEmail(email);
+            if (value) {
+                return true;
+            } else {
+                return true;
+            }
         } catch (SQLException ex) {
             return false;
-        } catch(Exception ex) {
-            ex.printStackTrace();
         }
-        return false;
     }
 
     public boolean createUserModel(UserModel newUserModel) throws SQLException {
@@ -42,7 +43,9 @@ public class PrincipalController {
 
     public UserModel loginUser(UserModel user) throws SQLException {
         userModel = user.loginUser();
-        user.setId(userModel.getId());
+        if (userModel != null) {
+            user.setId(userModel.getId());
+        }
         return userModel;
     }
 

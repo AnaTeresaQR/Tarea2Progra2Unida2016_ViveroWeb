@@ -36,7 +36,6 @@ public class UserTableManager {
         UserModel userLogin = searchUser(email);
 
         if (userLogin != null) {
-
             if (userLogin.getPassword().equals(password)) {
                 return userLogin;
             }
@@ -54,14 +53,14 @@ public class UserTableManager {
 
     private UserModel searchUser(String email) throws SQLException {
         UserModel user = null;
-        if (email == null) {
+        if (email == null && !email.equals("")) {
             return null;
         }
 
         String sql = "SELECT * FROM " + USER_TABLE_NAME + " WHERE email = " + connectionManager.sqlFormat(email);
         ResultSet rs = connectionManager.executeQueryDB(sql);
 
-        while (rs.next()) {
+        if (rs.next()) {
             int idU = (int) rs.getObject("id");
             String userNameU = (String) rs.getObject("userName");
             String lastNameU = (String) rs.getObject("lastName");
@@ -69,7 +68,8 @@ public class UserTableManager {
             String telephoneU = (String) rs.getObject("telephone");
             String emailU = (String) rs.getObject("email");
             String passwordU = (String) rs.getObject("password");
-            return new UserModel(idU, userNameU, lastNameU, scheduleU, telephoneU, emailU, passwordU);
+            user =  new UserModel(idU, userNameU, lastNameU, scheduleU, telephoneU, emailU, passwordU);
+            return user;
         }
 
         rs.close();

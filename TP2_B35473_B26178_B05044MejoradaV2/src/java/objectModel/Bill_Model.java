@@ -3,8 +3,6 @@ package objectModel;
 import DataBase.BillTableManager;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -18,6 +16,7 @@ public class Bill_Model {
     private Date billDate;
     private String numCard;
     private String typeCard;
+    private String dateExp;
     private String creditInstitution;
     private String products;
     private double subtotal;
@@ -28,24 +27,26 @@ public class Bill_Model {
     public Bill_Model() {
     }
 
-    public Bill_Model(int id, UserModel user, String addressUser, Date billDate, String numCard, String typeCard, String creditInstitution, String products, double subtotal, double total) {
+    public Bill_Model(int id, UserModel user, String addressUser, Date billDate, String numCard, String typeCard, String dateExp, String creditInstitution, String products, double subtotal, double total) {
         this.id = id;
         this.user = user;
         this.addressUser = addressUser;
         this.billDate = billDate;
         this.numCard = numCard;
         this.typeCard = typeCard;
+        this.dateExp = dateExp;
         this.creditInstitution = creditInstitution;
         this.products = products;
         this.subtotal = subtotal;
         this.total = total;
     }
 
-    public Bill_Model(UserModel user, String addressUser, String numCard, String typeCard, String creditInstitution, String products, double subtotal, double total) {
+    public Bill_Model(UserModel user, String addressUser, String numCard, String typeCard, String dateExp, String creditInstitution, String products, double subtotal, double total) {
         this.user = user;
         this.addressUser = addressUser;
         this.numCard = numCard;
         this.typeCard = typeCard;
+        this.dateExp = dateExp;
         this.creditInstitution = creditInstitution;
         this.products = products;
         this.subtotal = subtotal;
@@ -107,6 +108,14 @@ public class Bill_Model {
 
     public void setTypeCard(String typeCard) {
         this.typeCard = typeCard;
+    }
+
+    public String getDateExp() {
+        return dateExp;
+    }
+
+    public void setDateExp(String dateExp) {
+        this.dateExp = dateExp;
     }
 
     public String getCreditInstitution() {

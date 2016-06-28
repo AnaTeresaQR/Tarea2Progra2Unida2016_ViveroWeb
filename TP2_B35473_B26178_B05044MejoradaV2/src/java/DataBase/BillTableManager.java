@@ -23,13 +23,14 @@ public class BillTableManager {
         String numCard = connectionManager.sqlFormat(bill.getNumCard());
         String typeCard = connectionManager.sqlFormat(bill.getTypeCard());
         String creditInstitution = connectionManager.sqlFormat(bill.getCreditInstitution());
+        String dateExp = connectionManager.sqlFormat(bill.getDateExp());
         String products = connectionManager.sqlFormat(bill.getProducts());
         double subtotal = bill.getSubtotal();
         double total = bill.getTotal();
 
         String sql = "INSERT INTO " + BILL_TABLE_NAME + " (id, idUser, addressUser, billDate,"
-                + " numCard, typeCard, creditInstitution, products, subtotal, total) values(default, " + idUser
-                + ", " + addressUser + ", curdate()" + ", " + numCard + ", " + typeCard + ", " + creditInstitution + ", " + products + ", " + subtotal + ", " + total + ")";
+                + " numCard, typeCard, dateExp , creditInstitution, products, subtotal, total) values(default, " + idUser
+                + ", " + addressUser + ", curdate()" + ", " + numCard + ", " + typeCard + ", " + dateExp + ", " + creditInstitution + ", " + products + ", " + subtotal + ", " + total + ")";
 
         connectionManager.executeUpdateDB(sql);
     }

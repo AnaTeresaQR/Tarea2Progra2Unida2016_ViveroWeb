@@ -39,8 +39,8 @@
         <br><br/>
         <input type="submit" value="<%=valueSubmit%>"/>
         <input type="reset" value="Vaciar Campos"/>
-
+        <p><%=(String) session.getAttribute("msj")%></p>
+         <br><br/>
     </form>
 
-    <p><%=(String) session.getAttribute("msj")%></p>
     <%@include file="footer.jsp" %>

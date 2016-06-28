@@ -16,6 +16,8 @@
         <input  type="submit" value="Ingresar"/>
         <input type="reset" value="Vaciar Campos"/>
         <br><br/>
+        <p><%=(String) session.getAttribute("msj")%></p>
+        <br><br/>
     </form>
 
 </div>
