@@ -34,7 +34,7 @@
         <p id="name">Nombre del producto: <%=product.getName()%></p>
         <p id="price"> Precio: <%=product.getPrice()%></p>
         <p>Cantidad:</p> 
-        <input type="text" id ="amount" name="amount" placeholder=<%=amount + ""%> required/>
+        <input type="number" id ="amount" name="amount" placeholder=<%=amount + ""%> required/>
         <p id="subTotal">Subtotal: </p>
     </div>
 

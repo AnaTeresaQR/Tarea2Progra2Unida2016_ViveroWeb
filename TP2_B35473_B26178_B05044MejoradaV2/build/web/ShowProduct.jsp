@@ -15,7 +15,7 @@
         <p id="name"> Nombre del producto: <%=productSession.getName()%> </p>        
         <p id="longDescription"> Descripcion: <%=productSession.getLongDescription()%> </p>        
         <p id="price"> Precio: <%=productSession.getPrice()%> colones</p>
-        <a href="ShoppingCart.jsp?id=<%=productSession.getProductId()%>">Añadir al carrito</a>
+        <a href="AddtoCartController.jsp?id=<%=productSession.getProductId()%>">Añadir al carrito</a>
         <br>
 
         <img src="<%= productSession.getUrlPicture1()%>" width="350" height="300" alt="top"/>
