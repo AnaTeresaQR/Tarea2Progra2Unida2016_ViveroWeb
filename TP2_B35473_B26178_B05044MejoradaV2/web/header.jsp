@@ -13,6 +13,7 @@
     <a href="index.jsp"><h1 id="tittle"> Vivero la Semilla Web </h1></a>
 
     <%@include file="KeepSession.jsp" %>
+    <%@include file="Search.jsp" %>
 </header>
 
 

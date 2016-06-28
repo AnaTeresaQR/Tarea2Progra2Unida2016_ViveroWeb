@@ -6,7 +6,6 @@
     <%@include file="informationMenu.jsp"%>
     <%@include file="CategoryMenu.jsp"%>
 </div>
-<%@include file="footer.jsp"%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
@@ -21,7 +20,7 @@
         %>
 
         <div class="products">
-            
+
             <a href="ShowProductController.jsp?id=<%=product.getProductId()%>"><%=product.getName()%></a>
             <p id="shortDescription"> Descripcion: <%=product.getShortDescription()%> </p>        
             <p id="price"> Precio: <%=product.getPrice()%> </p>
@@ -36,3 +35,4 @@
         %> 
     </div>
 </div>
+<%@include file="footer.jsp"%>

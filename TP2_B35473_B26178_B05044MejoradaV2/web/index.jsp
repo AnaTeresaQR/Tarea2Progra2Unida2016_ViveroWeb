@@ -1,4 +1,5 @@
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="objectModel.UserModel" %> 
 <%@include file="header.jsp" %> 
 
@@ -10,6 +11,7 @@
 
 <div   id="userMenu" >
     <%@include file="SessionMenu.jsp" %>
+    
 </div>
 
 

@@ -21,7 +21,7 @@ body {
 #header {
     position: fixed;
     width: 97.2%;
-    height: 15%;
+    height: 16%;
     background: thistle;
     top: 8px;
     border: 10px solid darkblue;
@@ -119,6 +119,10 @@ textarea {
     height: 60%;
 }
 
+#listP {
+    height: 60%;
+}
+
 .products {
     padding:4px;
     background:#fff;
@@ -131,4 +135,12 @@ textarea {
     margin-left: 76%;
     width: fit-content;
     height: 18%;
+}
+
+#formSearch {
+    /*    margin-right:76%;
+        margin-left: 3%;
+        width: fit-content;
+        height: 18%;*/
+    float: left;
 }
