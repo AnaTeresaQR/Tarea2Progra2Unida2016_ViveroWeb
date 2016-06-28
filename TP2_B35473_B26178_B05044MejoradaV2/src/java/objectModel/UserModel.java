@@ -41,8 +41,12 @@ public class UserModel {
         this.password = password;
     }
 
-    public boolean existEmail(String email) throws SQLException {
-        return dataBaseManager.existEmail(email);
+    public boolean existEmail(String email, String data) throws SQLException {
+        return dataBaseManager.existEmail(email, data);
+    }
+    
+    public boolean existSchedule(String schedule, String data) throws SQLException {
+        return dataBaseManager.existSchedule(schedule, data);
     }
 
     public boolean createModel() {
@@ -54,16 +58,16 @@ public class UserModel {
         }
     }
 
-    public UserModel loginUser() throws SQLException {
-        return dataBaseManager.login(this.getEmail(), this.getPassword());
+    public UserModel loginUserEmail(String data) throws SQLException {
+        return dataBaseManager.login(this.getEmail(), this.getPassword(), data);
     }
 
     public void updateModel() throws SQLException {
         dataBaseManager.editUser(this);
     }
 
-    public boolean deleteUser() throws SQLException {
-        return dataBaseManager.deleteUser(this);
+    public boolean deleteUser(String data) throws SQLException {
+        return dataBaseManager.deleteUser(this, data);
     }
 
     public String tableC() throws SQLException {

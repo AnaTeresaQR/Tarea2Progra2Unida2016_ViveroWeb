@@ -32,8 +32,8 @@ public class UserTableManager {
         connectionManager.executeUpdateDB(sql);
     }
 
-    public UserModel login(String email, String password) throws SQLException {
-        UserModel userLogin = searchUser(email);
+    public UserModel login(String email, String password, String data) throws SQLException {
+        UserModel userLogin = searchUser(email, data);
 
         if (userLogin != null) {
             if (userLogin.getPassword().equals(password)) {
@@ -43,24 +43,32 @@ public class UserTableManager {
         return null;
     }
 
-    public boolean existEmail(String email) throws SQLException {
-        UserModel userLogin = searchUser(email);
+    public boolean existEmail(String email, String data) throws SQLException {
+        UserModel userLogin = searchUser(email, data);
         if (userLogin != null) {
             return true;
         }
         return false;
     }
 
-    private UserModel searchUser(String email) throws SQLException {
-        UserModel user = null;
-        if (email == null && !email.equals("")) {
+    public boolean existSchedule(String schedule, String data) throws SQLException {
+        UserModel userLogin = searchUser(schedule, data);
+        if (userLogin != null) {
+            return true;
+        }
+        return false;
+    }
+
+    private UserModel searchUser(String info, String data) throws SQLException {
+        UserModel user;
+        if (info == null && !info.equals("")) {
             return null;
         }
 
-        String sql = "SELECT * FROM " + USER_TABLE_NAME + " WHERE email = " + connectionManager.sqlFormat(email);
+        String sql = "SELECT * FROM " + USER_TABLE_NAME + " WHERE " + data + " = " + connectionManager.sqlFormat(info);
         ResultSet rs = connectionManager.executeQueryDB(sql);
 
-        if (rs.next()) {
+        while (rs.next()) {
             int idU = (int) rs.getObject("id");
             String userNameU = (String) rs.getObject("userName");
             String lastNameU = (String) rs.getObject("lastName");
@@ -68,7 +76,7 @@ public class UserTableManager {
             String telephoneU = (String) rs.getObject("telephone");
             String emailU = (String) rs.getObject("email");
             String passwordU = (String) rs.getObject("password");
-            user =  new UserModel(idU, userNameU, lastNameU, scheduleU, telephoneU, emailU, passwordU);
+            user = new UserModel(idU, userNameU, lastNameU, scheduleU, telephoneU, emailU, passwordU);
             return user;
         }
 
@@ -97,9 +105,9 @@ public class UserTableManager {
         connectionManager.executeUpdateDB(sql);
     }
 
-    public boolean deleteUser(UserModel user) throws SQLException {
+    public boolean deleteUser(UserModel user, String data) throws SQLException {
         BillTableManager connectionBill = new BillTableManager();
-        UserModel userLogin = searchUser(user.getEmail());
+        UserModel userLogin = searchUser(user.getEmail(), data);
 
         if (userLogin != null) {
             if (userLogin.getPassword().equals(user.getPassword())) {
@@ -132,16 +140,4 @@ public class UserTableManager {
         rs.close();
         return sb.toString();
     }
-
-    public static void main(String[] args) throws SQLException {
-        UserTableManager n = new UserTableManager();
-        UserModel user = n.login("anateresa@gmail.com", "Pichi2995");
-        System.out.println(user.getId());
-
-        user.setLastName("Ramírez");
-        n.editUser(user);
-        n.deleteUser(user);
-
-    }
-
 }

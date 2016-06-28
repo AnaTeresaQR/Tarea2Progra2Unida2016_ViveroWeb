@@ -20,7 +20,7 @@
 
         <%
             PrincipalController controller = new PrincipalController();
-            if (!controller.existEmail(userModel.getEmail())) {
+            if (!controller.existEmail(userModel.getEmail()) && !controller.existSchedule(userModel.getSchedule())) {
                 controller.createUserModel(userModel);
                 response.sendRedirect("UserLogin.jsp");
             } else {

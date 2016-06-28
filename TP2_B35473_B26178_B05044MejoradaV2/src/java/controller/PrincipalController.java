@@ -13,12 +13,28 @@ public class PrincipalController {
 
     public boolean existEmail(String email) {
         userModel = new UserModel();
+        String data = processNum(2);
         try {
-            boolean value = userModel.existEmail(email);
+            boolean value = userModel.existEmail(email, data);
             if (value) {
                 return true;
             } else {
+                return false;
+            }
+        } catch (SQLException ex) {
+            return false;
+        }
+    }
+
+    public boolean existSchedule(String schedule) {
+        userModel = new UserModel();
+        String data = processNum(1);
+        try {
+            boolean value = userModel.existSchedule(schedule, data);
+            if (value) {
                 return true;
+            } else {
+                return false;
             }
         } catch (SQLException ex) {
             return false;
@@ -42,7 +58,8 @@ public class PrincipalController {
     }
 
     public UserModel loginUser(UserModel user) throws SQLException {
-        userModel = user.loginUser();
+        String data = processNum(2);
+        userModel = user.loginUserEmail(data);
         if (userModel != null) {
             user.setId(userModel.getId());
         }
@@ -51,11 +68,27 @@ public class PrincipalController {
 
     public boolean deleteUser(UserModel user) throws SQLException {
         userModel = user;
-        return userModel.deleteUser();
+        String data = processNum(2);
+        return userModel.deleteUser(data);
     }
 
     public String tableContent() throws SQLException {
         return userModel.tableC();
+    }
+
+    private String processNum(int num) {
+        String variable;
+        switch (num) {
+            case 1:
+                variable = "schedule";
+                break;
+            case 2:
+                variable = "email";
+                break;
+            default:
+                throw new AssertionError();
+        }
+        return variable;
     }
 
 }
