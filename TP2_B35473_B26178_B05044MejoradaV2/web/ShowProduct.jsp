@@ -1,10 +1,16 @@
 <%@page import="xmlProducts.Product"%>
 <%@include file="header.jsp" %> 
+
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
 </div>
-<%@include file="footer.jsp"%>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
+</div>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
@@ -24,3 +30,5 @@
 
     </div>
 </div>
+
+<%@include file="footer.jsp"%>

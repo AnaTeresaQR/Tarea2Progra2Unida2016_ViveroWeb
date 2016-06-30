@@ -2,17 +2,22 @@
 <%@page import="java.util.List"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
 <%@include file="header.jsp" %>    
+
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
+</div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
 </div>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
 
     <div id="top10">
-        <%
-            String category = request.getParameter("category");
+        <%            String category = request.getParameter("category");
             ProductsXmlManager mx = new ProductsXmlManager(getServletContext().getRealPath("xml/products.xml"));
             List<Product> productsList = mx.getProductsByCategory(category);
             for (int i = 0; i < productsList.size(); i++) {

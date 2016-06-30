@@ -1,9 +1,15 @@
 <%@include file="header.jsp" %>       
+
 <div id="menus">
-    
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
 </div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
+</div>
+
 <div id = "showConsultForm" class="formClass">
 
     <a onclick="ocultarDiv('#showConsultForm')">Cerrar</a>  

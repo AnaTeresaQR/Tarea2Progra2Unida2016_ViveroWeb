@@ -1,6 +1,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@include file="header.jsp" %>
+
+<div id="menus">
+    <%@include file="informationMenu.jsp"%>
+
+    <%@include file="CategoryMenu.jsp"%>
+</div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
+</div>
+
 <div id = "showLoginUserForm" class="formClass">
 
     <a onclick="ocultarDiv('#showLoginUserForm')">Cerrar</a>  

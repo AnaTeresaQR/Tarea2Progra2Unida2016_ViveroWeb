@@ -11,7 +11,6 @@
 
 <div   id="userMenu" >
     <%@include file="SessionMenu.jsp" %>
-    
 </div>
 
 

@@ -135,12 +135,5 @@ textarea {
     margin-left: 76%;
     width: fit-content;
     height: 18%;
-}
-
-#formSearch {
-    /*    margin-right:76%;
-        margin-left: 3%;
-        width: fit-content;
-        height: 18%;*/
-    float: left;
+    
 }

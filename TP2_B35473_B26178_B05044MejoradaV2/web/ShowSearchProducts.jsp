@@ -2,9 +2,15 @@
 <%@page import="java.util.List"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
 <%@include file="header.jsp" %>    
+
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
+</div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
 </div>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,7 +23,7 @@
             for (int i = 0; i < searchP.size(); i++) {
                 Product productSearch = searchP.get(i);
         %>
-        <p><%=  productSearch.getName() %> </p>
+        <p><%=  productSearch.getName()%> </p>
 
         <div class="products">
 

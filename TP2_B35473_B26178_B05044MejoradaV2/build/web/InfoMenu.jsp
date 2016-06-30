@@ -1,8 +1,15 @@
-<%@include file="header.jsp" %>       
+<%@include file="header.jsp" %>   
+
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
 </div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
+</div>
+
 <div class="formClass">
     <h3>Descripcion de la empresa</h3>
     <p>En nuestra empresa damos un servicio personalizado de lo que cada persona necesite para el embellecimiento 
