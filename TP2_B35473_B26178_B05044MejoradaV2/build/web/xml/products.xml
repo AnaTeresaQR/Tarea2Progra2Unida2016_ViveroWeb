@@ -261,7 +261,7 @@
         <productSold>0</productSold>
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/woodTrees/caoba.jpg</urlPicture1>
-        <urlPicture2>productsPicture/woodTrees/caoba2.jpg</urlPicture2>
+        <urlPicture2>productsPicture/woodTrees/caoba2.png</urlPicture2>
         <urlPicture3>productsPicture/woodTrees/caoba3.jpg</urlPicture3>
     </product>
     <product category="Arbol Maderable" productId="25">

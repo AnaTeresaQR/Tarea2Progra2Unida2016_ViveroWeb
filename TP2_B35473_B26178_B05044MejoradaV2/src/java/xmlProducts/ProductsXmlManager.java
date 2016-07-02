@@ -270,8 +270,10 @@ public class ProductsXmlManager {
                             .item(0).getChildNodes().item(0).getNodeValue();
                     String urlPicture2 = element.getElementsByTagName("urlPicture2")
                             .item(0).getChildNodes().item(0).getNodeValue();
+                    
                     String urlPicture3 = element.getElementsByTagName("urlPicture3")
                             .item(0).getChildNodes().item(0).getNodeValue();
+                    
                     int productsSold = Integer.parseInt(element
                             .getElementsByTagName("productSold").item(0).getChildNodes()
                             .item(0).getNodeValue());

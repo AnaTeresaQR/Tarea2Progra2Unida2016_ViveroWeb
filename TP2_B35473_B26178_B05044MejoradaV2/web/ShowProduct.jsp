@@ -21,12 +21,20 @@
         <p id="name"> Nombre del producto: <%=productSession.getName()%> </p>        
         <p id="longDescription"> Descripcion: <%=productSession.getLongDescription()%> </p>        
         <p id="price"> Precio: <%=productSession.getPrice()%> colones</p>
-        <a href="AddtoCartController.jsp?id=<%=productSession.getProductId()%>">Añadir al carrito</a>
+        <a href="AddProductController.jsp?id=<%=productSession.getProductId()%>">Añadir al carrito</a>
         <br>
 
-        <img src="<%= productSession.getUrlPicture1()%>" width="350" height="300" alt="top"/>
-        <img src="<%= productSession.getUrlPicture2()%>" width="350" height="300" alt="top"/>
-        <img src="<%= productSession.getUrlPicture3()%>" width="350" height="300" alt="top"/>
+        <img src="<%= productSession.getUrlPicture1()%>" width="350" height="300" alt="top1"/>
+        <img src="<%= productSession.getUrlPicture2()%>" width="350" height="300" alt="top2"/>
+        <%
+        // en el caso de no encontrar la imagen no la muestra en la página
+            if (!productSession.getUrlPicture3().equals("urlproduct3")) {
+        %>
+        <img src="<%= productSession.getUrlPicture3()%>" width="350" height="300" alt="top3"/>
+        <%
+            }
+        %>
+
 
     </div>
 </div>
