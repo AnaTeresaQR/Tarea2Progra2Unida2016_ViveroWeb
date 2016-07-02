@@ -1,6 +1,8 @@
 package controller;
 
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import objectModel.ConsultModel;
 
 /**
@@ -11,10 +13,15 @@ public class ConsultController {
 
     private ConsultModel consultModel;
 
-    public void createConsultModel(ConsultModel newConsultModel) throws SQLException {
-        consultModel = new ConsultModel();
-        consultModel = newConsultModel;
-        consultModel.createModel();
+    public boolean createConsultModel(ConsultModel newConsultModel) {
+        try {
+            consultModel = new ConsultModel();
+            consultModel = newConsultModel;
+            consultModel.createModel();
+            return true;
+        } catch (SQLException ex) {
+            return false;
+        }
     }
 
     public static void main(String[] args) throws SQLException {

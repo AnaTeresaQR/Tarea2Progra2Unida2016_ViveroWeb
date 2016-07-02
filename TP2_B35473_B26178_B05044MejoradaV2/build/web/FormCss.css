@@ -20,3 +20,8 @@ label {
 #formSearch {
     position: absolute;
 }
+
+#contactUsForm {
+    float: right;
+    padding: 3%;
+}

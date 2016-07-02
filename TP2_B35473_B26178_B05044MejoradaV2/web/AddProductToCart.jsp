@@ -2,19 +2,24 @@
 <%@page import="xmlProducts.Product"%>
 <%@page import="xmlProducts.CartManager"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
-<%@include file="header.jsp" %>    
+<%@include file="header.jsp" %>   
+
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
+
     <%@include file="CategoryMenu.jsp"%>
+</div>
+
+<div   id="userMenu" >
+    <%@include file="SessionMenu.jsp" %>
 </div>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
 
-    <%
-        Product newProduct = (Product) session.getAttribute("product");
+    <%        Product newProduct = (Product) session.getAttribute("product");
     %>
-    
+
     <p>Digite la cantidad de Productos que desea </p>
     <div class="products">
         <p id="name">Nombre del producto: <%=newProduct.getName()%></p>

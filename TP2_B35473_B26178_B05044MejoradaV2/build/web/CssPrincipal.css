@@ -5,6 +5,7 @@ body {
     background-size:  cover;
 
 }
+
 #content {
     background: white;
     text-align: center;
@@ -40,9 +41,20 @@ body {
     background: white;
 }
 
+a {
+    color: black;
+    font-family: verdana, arial, sans-serif; 
+    font-size: 10pt; 
+    font-weight: bold; 
+    background-color: transparent; 
+    color: black; 
+}
+
 #tittle {  
+    color: #006666; 
     text-align: center;
     font-style: oblique;
+    text-decoration: none;
 }
 #menus {
     float: left;
@@ -68,10 +80,6 @@ body {
     outline: 5px solid green;
     padding: 15px; 
     right: 10px;
-}
-
-a {
-    color: black;
 }
 
 .menu {
@@ -106,6 +114,8 @@ textarea {
 }
 
 #global {
+    text-align: center;
+    color : teal;
     margin-top: 11.3%;
     margin-left: 21%;
     height: 400px;
@@ -136,5 +146,5 @@ textarea {
     margin-left: 76%;
     width: fit-content;
     height: 18%;
-    
+
 }

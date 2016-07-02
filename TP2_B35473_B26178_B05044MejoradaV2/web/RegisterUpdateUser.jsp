@@ -18,7 +18,7 @@
 
 <div id = "showRegisterForm" class="formClass">
 
-    <a onclick="ocultarDiv('#showRegisterForm')">Cerrar</a>  
+    <%--<a onclick="ocultarDiv('#showRegisterForm')">Cerrar</a>  --%>
 
     <h2>Formulario de datos personales</h2>
 

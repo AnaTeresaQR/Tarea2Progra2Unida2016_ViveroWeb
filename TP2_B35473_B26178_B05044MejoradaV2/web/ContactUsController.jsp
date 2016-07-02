@@ -23,8 +23,14 @@
 
         <%
             ConsultController consultController = new ConsultController();
-            consultController.createConsultModel(consultModel);
-
+            boolean result = consultController.createConsultModel(consultModel);
+            String messageConsult = "";
+            if (result) {
+                response.sendRedirect("index.jsp");
+            } else {
+                messageConsult = "Problemas al enviar su consulta.\nPor favor intente de nuevo";
+                response.sendRedirect("ContactUs.jsp?result=" + messageConsult);
+            }
         %>
     </body>
 </html>

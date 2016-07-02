@@ -1,6 +1,20 @@
-<footer id="footer">
-    <h4 id="linksFooter">
-        <p> Copyright ©TRE Co. 2016 </p>
+<%-- 
+    Document   : divDataContactUs
+    Created on : 02/07/2016, 05:45:14 PM
+    Author     : Ana Teresa
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+
+<div id = "contactUsForm" class="">
+    <h4 id="links">
+
+        <h3>Cont√°ctenos</h3>
+        <p>ana.quesada@ucrso.info</p>
+        <p>edgardo.quiros@ucrso.info</p>
+        <p>robert.sanchez@ucrso.info</p>
+
         <a href="https://www.facebook.com/edgardo.quiros.9" style="text-decoration:none">
             <img src="img/facebook.png" width="20" height="20" alt="facebook-app"/>
         </a>
@@ -13,4 +27,4 @@
             <img src="img/google_plus.png" width="20" height="20" alt="googleplus-app"/>
         </a>
     </h4>
-</footer>
+</div>
