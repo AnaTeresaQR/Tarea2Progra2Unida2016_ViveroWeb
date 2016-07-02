@@ -32,8 +32,8 @@
                 session.invalidate();
                 response.sendRedirect("index.jsp");
             } else {
-                session.setAttribute("msj", "FALLIDA, lo sentimos por favor intente de nuevo");
-                response.sendRedirect("DeleteUser.jsp");
+                String msjfail = "FALLIDA, lo sentimos por favor intente de nuevo";
+                response.sendRedirect("DeleteUser.jsp?msjU=" + msjfail);
             }
         %>
     </body>

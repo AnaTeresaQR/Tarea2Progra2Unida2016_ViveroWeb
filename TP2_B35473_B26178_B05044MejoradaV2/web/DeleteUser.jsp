@@ -29,7 +29,14 @@
         <input type="submit" value="Borrar Cuenta"/>
         <input type="reset" value="Vaciar Campos"/>
         <br><br/>
-    </form>
-    <p><%=(String) session.getAttribute("msj")%></p>
+
+
+        <%            String message = request.getParameter("msjU");
+            if (message == null) {
+                message = "";
+            }
+        %>
+        <p><%=message%></p>
+    </form> 
 </div>
 <%@include file="footer.jsp" %>
