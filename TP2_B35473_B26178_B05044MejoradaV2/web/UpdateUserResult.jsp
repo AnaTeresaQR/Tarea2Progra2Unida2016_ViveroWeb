@@ -19,6 +19,7 @@
     userModelTemp.setId(userSession.getId());
     PrincipalController controller = new PrincipalController();
     boolean result = controller.updateUser(userModelTemp);
+    
     String resultUpdate = "";
     if (result) {
         UserModel newUserModel = controller.loginUser(userModelTemp);
@@ -27,7 +28,7 @@
         response.sendRedirect("index.jsp?msj=" + msj);
     } else {
         String msj = "FALLIDO, lo sentimos por favor intente de nuevo";
-        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=2" + "&msj=" + msj);
+        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=2" + "&msj=" + msj + "&optionselect=1");
     }
 %>
 

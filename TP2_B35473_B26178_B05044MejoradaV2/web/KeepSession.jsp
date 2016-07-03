@@ -8,7 +8,7 @@
         if (sessionUser == null) {
             emailS = "No has iniciado Sesión";
     %>
-    <%=emailS%>&nbsp;<a href="UserLogin.jsp">(Inicia sesión)</a>
+    <%=emailS%>&nbsp;<a href="UserLogin.jsp?optionselect=1">(Inicia sesión)</a>
     <%
     } else {
         emailS = sessionUser.getEmail();

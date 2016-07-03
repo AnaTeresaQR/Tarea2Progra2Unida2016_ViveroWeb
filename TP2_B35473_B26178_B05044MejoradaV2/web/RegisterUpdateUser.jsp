@@ -40,13 +40,8 @@
         <input type="submit" value="<%=valueSubmit%>"/>
         <input type="reset" value="Vaciar Campos"/>
 
-        <%                String msj = (String) request.getParameter("msj");
+        <%@include file="MessageValidator.jsp"%>
 
-            if (msj == null) {
-                msj = "";
-            }
-        %>     
-        <p><%=msj%></p>
         <br><br/>
     </form>
 </div>

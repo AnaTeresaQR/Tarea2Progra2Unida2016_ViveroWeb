@@ -9,11 +9,11 @@
     String msj = (String) request.getParameter("msj");
     String optionS = (String) request.getParameter("optionselect").trim();
     if (optionS != null) {
-        int typeValue = Integer.parseInt(optionS);
+        int valueSel = Integer.parseInt(optionS);
         if (msj == null) {
             msj = "";
         } else {
-            switch (typeValue) {
+            switch (valueSel) {
                 case 1:
 %>
 <p><%=msj%></p>

@@ -18,10 +18,10 @@
             && !controller.existSchedule(userModel.getSchedule())) {
 
         controller.createUserModel(userModel);
-        response.sendRedirect("UserLogin.jsp");
+        response.sendRedirect("UserLogin.jsp?optionselect=1");
     } else {
         String msj = "No se pudo registrar, Intente de nuevo";
-        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=1" + "&msj=" + msj);
+        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=1" + "&msj=" + msj + "&optionselect=1");
     }
 %>
 
