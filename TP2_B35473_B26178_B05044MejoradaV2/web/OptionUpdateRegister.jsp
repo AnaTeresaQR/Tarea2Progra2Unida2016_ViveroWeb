@@ -12,6 +12,5 @@
             urlAction = "UpdateUserResult.jsp";
             valueSubmit = "Actualizar";
             break;
-        default:
     }
 %>

@@ -22,7 +22,7 @@
         } else {
             String msj = "No se encuentra disponible la cantidad de productos seleccionada"
                     + "\nCantidad disponible: " + newProduct.getProductForSell();
-            response.sendRedirect("AddProductToCart.jsp?msj=" + msj);
+            response.sendRedirect("AddProductToCart.jsp?msj=" + msj + "&optionselect=2");
         }
 
     }

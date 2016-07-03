@@ -14,7 +14,7 @@
     UserModel newUserModel = controller.loginUser(userModelLoginTemp);
     if (newUserModel == null) {
         String msj = "FALLIDO, lo sentimos por favor intente de nuevo";
-        response.sendRedirect("UserLogin.jsp?msj=" + msj);
+        response.sendRedirect("UserLogin.jsp?msj=" + msj + "&optionselect=1");
     }
     if (newUserModel != null) {
         session.setAttribute("user", newUserModel);

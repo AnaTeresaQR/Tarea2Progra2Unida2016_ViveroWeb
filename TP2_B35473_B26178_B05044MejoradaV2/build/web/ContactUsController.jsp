@@ -29,7 +29,7 @@
                 response.sendRedirect("index.jsp");
             } else {
                 messageConsult = "Problemas al enviar su consulta.\nPor favor intente de nuevo";
-                response.sendRedirect("ContactUs.jsp?result=" + messageConsult);
+                response.sendRedirect("ContactUs.jsp?msj=" + messageConsult + "&optionselect=1");
             }
         %>
     </body>

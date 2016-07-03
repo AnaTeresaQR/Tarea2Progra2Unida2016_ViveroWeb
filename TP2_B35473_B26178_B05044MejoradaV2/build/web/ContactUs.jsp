@@ -10,7 +10,6 @@
 
 <div   id="userMenu" >
     <%@include file="SessionMenu.jsp" %>
-
 </div>
 
 
@@ -43,12 +42,7 @@
         <input type="submit" value="Enviar"/>
         <input type="reset" value="Vaciar Campos"/>
 
-        <%            String msjConsult = (String) request.getParameter("result");
-            if (msjConsult == null) {
-                msjConsult = "";
-            }
-        %>
-        <p><%=msjConsult%></p>
+        <%@include file="MessageValidator.jsp" %>
 
     </form>
 

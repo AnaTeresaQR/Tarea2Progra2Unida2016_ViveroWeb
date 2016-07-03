@@ -40,13 +40,4 @@
 
 <%@include file="footer.jsp"%>
 
-<%    String msj = (String) request.getParameter("msj");
-
-    if (msj == null) {
-        msj = "";
-    } else {
-%>
-<script>alert('<%=msj%>');</script>
-<%
-    }
-%>
+<%@include file="MessageValidator.jsp" %>
