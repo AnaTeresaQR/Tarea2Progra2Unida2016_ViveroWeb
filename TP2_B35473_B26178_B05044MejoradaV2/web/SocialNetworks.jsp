@@ -10,6 +10,6 @@
     <img src="img/twitter.png" width="30" height="20" alt="twitter-app"/>
 </a>
 <span>&nbsp;&nbsp;</span>
-<a href="https://plus.google.com/105018388475903160039/posts" style="text-decoration:none">
+<a href="https://plus.google.com/103483410251245527860/posts" style="text-decoration:none">
     <img src="img/google_plus.png" width="20" height="20" alt="googleplus-app"/>
 </a>
