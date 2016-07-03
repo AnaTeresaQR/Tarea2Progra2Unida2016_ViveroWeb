@@ -90,8 +90,7 @@ a {
     padding:  16px;
 }
 
-#footer {
-    position: fixed;
+#footer {   
     text-align: center;
     color: white;
     width: 98.6%;

@@ -5,7 +5,8 @@
 <%
     UserModel sessionUserT = (UserModel) session.getAttribute("user");
     if (sessionUserT == null) {
-        response.sendRedirect("UserLogin.jsp");
+        String msj = "Requiere ingresar para realizar compras. Muchas Gracias";
+        response.sendRedirect("UserLogin.jsp?msj=" + msj);
     } else {
         String idP = request.getParameter("id");
         ProductsXmlManager mx = new ProductsXmlManager(getServletContext().getRealPath("xml/products.xml"));
