@@ -39,6 +39,7 @@
         <br><br/>
         <input type="submit" value="<%=valueSubmit%>"/>
         <input type="reset" value="Vaciar Campos"/>
+
         <%                String msj = (String) request.getParameter("msj");
 
             if (msj == null) {
