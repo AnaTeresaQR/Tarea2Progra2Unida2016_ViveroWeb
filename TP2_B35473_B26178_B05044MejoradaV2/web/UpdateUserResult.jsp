@@ -24,8 +24,8 @@
     if (result) {
         UserModel newUserModel = controller.loginUser(userModelTemp);
         session.setAttribute("user", userModelTemp);
-        String msj = "EXITOSO,sus datos se han modificado";
-        response.sendRedirect("index.jsp?msj=" + msj);
+        String msj = "EXITOSO, sus datos se han modificado";
+        response.sendRedirect("index.jsp?msj=" + msj + "&optionselect=2");
     } else {
         String msj = "FALLIDO, lo sentimos por favor intente de nuevo";
         response.sendRedirect("RegisterUpdateUser.jsp?typeValue=2" + "&msj=" + msj + "&optionselect=1");

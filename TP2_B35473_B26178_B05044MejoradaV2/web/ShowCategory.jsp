@@ -33,8 +33,6 @@
             <br>
             <a href="ShowProductController.jsp?id=<%=product.getProductId()%>">Ver producto</a>
         </div>
-
-
         <%
             }
         %> 

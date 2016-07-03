@@ -29,14 +29,7 @@
         <input type="submit" value="Borrar Cuenta"/>
         <input type="reset" value="Vaciar Campos"/>
         <br><br/>
-
-
-        <%            String message = request.getParameter("msjU");
-            if (message == null) {
-                message = "";
-            }
-        %>
-        <p><%=message%></p>
+        <%@include file="MessageValidator.jsp" %>
     </form> 
 </div>
 <%@include file="footer.jsp" %>

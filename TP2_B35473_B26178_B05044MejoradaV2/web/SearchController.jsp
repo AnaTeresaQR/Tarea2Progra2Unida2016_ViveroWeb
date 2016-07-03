@@ -14,7 +14,7 @@
         response.sendRedirect("ShowSearchProducts.jsp");
     } else {
         String msj = "No hay producto que concuerde, intente de nuevo";
-        response.sendRedirect("index.jsp?msj=" + msj);
+        response.sendRedirect("index.jsp?msj=" + msj + "&optionselect=2");
     }
 %>
 <p> Param:  <%=forSearch%> </p>

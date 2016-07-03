@@ -1,9 +1,3 @@
-<%-- 
-    Document   : divDataContactUs
-    Created on : 02/07/2016, 05:45:14 PM
-    Author     : Ana Teresa
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 

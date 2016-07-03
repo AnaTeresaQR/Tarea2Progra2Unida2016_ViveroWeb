@@ -32,7 +32,6 @@ public class ProductsXmlManager {
     private DocumentBuilder builder;
     private Document xmlDocument;
     private XPath xPath;
-
     public ProductsXmlManager() {
         loadFile();
     }
@@ -100,9 +99,7 @@ public class ProductsXmlManager {
                             .getElementsByTagName("productForSell").item(0).getChildNodes()
                             .item(0).getNodeValue());
 
-                    if (plantsForSell > 0) {
-                        plants.add(new Product(name, productId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, plantsSold, plantsForSell));
-                    }
+                    plants.add(new Product(name, productId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, plantsSold, plantsForSell));
                 }
             }
             return plants;
@@ -142,14 +139,14 @@ public class ProductsXmlManager {
                             .item(0).getChildNodes().item(0).getNodeValue();
                     String urlPicture3 = element.getElementsByTagName("urlPicture3")
                             .item(0).getChildNodes().item(0).getNodeValue();
-                    int plantsSold = Integer.parseInt(element
+                    int productsSold = Integer.parseInt(element
                             .getElementsByTagName("productSold").item(0).getChildNodes()
                             .item(0).getNodeValue());
-                    int plantsForSell = Integer.parseInt(element
+                    int productsForSell = Integer.parseInt(element
                             .getElementsByTagName("productForSell").item(0).getChildNodes()
                             .item(0).getNodeValue());
 
-                    plant = new Product(name, productId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, plantsSold, plantsForSell);
+                    plant = new Product(name, productId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, productsSold, productsForSell);
                 }
             }
             return plant;
@@ -159,7 +156,7 @@ public class ProductsXmlManager {
         return null;
     }
 
-    public boolean updatePlantById(String productId, String newName, String newCategory, String newShortDecription, String newLongDescription, String newPrice) {
+    public boolean updatePlantById(String productId, String newName, String newCategory, String newShortDecription, String newLongDescription,String newProductsForSell, String newPrice, String newImage1, String newImage2, String newImage3) {
         try {
             String expression = String.format("/products/product[@productId='%s']", productId);
             Node node = (Node) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODE);
@@ -174,6 +171,10 @@ public class ProductsXmlManager {
                     element.getElementsByTagName("price").item(0).getChildNodes().item(0).setNodeValue(newPrice);
                     element.getElementsByTagName("shortDescription").item(0).getChildNodes().item(0).setNodeValue(newShortDecription);
                     element.getElementsByTagName("longDescription").item(0).getChildNodes().item(0).setNodeValue(newLongDescription);
+                    element.getElementsByTagName("productForSell").item(0).getChildNodes().item(0).setNodeValue(newProductsForSell);
+                    element.getElementsByTagName("urlPicture1").item(0).getChildNodes().item(0).setNodeValue(newImage1);
+                    element.getElementsByTagName("urlPicture2").item(0).getChildNodes().item(0).setNodeValue(newImage2);
+                    element.getElementsByTagName("urlPicture3").item(0).getChildNodes().item(0).setNodeValue(newImage3);
                     TransformerFactory transformerFactory = TransformerFactory.newInstance();
 
                     Transformer transformer = transformerFactory.newTransformer();
@@ -270,21 +271,16 @@ public class ProductsXmlManager {
                             .item(0).getChildNodes().item(0).getNodeValue();
                     String urlPicture2 = element.getElementsByTagName("urlPicture2")
                             .item(0).getChildNodes().item(0).getNodeValue();
-                    
                     String urlPicture3 = element.getElementsByTagName("urlPicture3")
                             .item(0).getChildNodes().item(0).getNodeValue();
-                    
                     int productsSold = Integer.parseInt(element
                             .getElementsByTagName("productSold").item(0).getChildNodes()
                             .item(0).getNodeValue());
                     int productsForSell = Integer.parseInt(element
                             .getElementsByTagName("productForSell").item(0).getChildNodes()
                             .item(0).getNodeValue());
-                    
-                    if (productsForSell > 0) {
-                        products.add(new Product(name, plantId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, productsSold, productsForSell));
-                    }
 
+                    products.add(new Product(name, plantId, urlPicture1, urlPicture2, urlPicture3, category, shortDecription, longDescription, price, productsSold, productsForSell));
                 }
             }
             return products;
@@ -295,7 +291,7 @@ public class ProductsXmlManager {
         return null;
     }
 
-    public boolean addNewProduct(String productId, String urlPicture1, String urlPicture2, String urlPicture3, String name, String shortDescription, String longDescription, String price, String category, String productSold, String productForSell) {
+    public boolean addNewProduct(String productId, String urlPicture1, String urlPicture2, String urlPicture3, String name, String shortDescription, String longDescription, String price, String category, String productForSell) {
         try {
             String expression = String.format("/products/product[@productId='%s']/@productId", productId);
             String productFount = (String) xPath.compile(expression).evaluate(xmlDocument);
@@ -328,7 +324,7 @@ public class ProductsXmlManager {
                 newPrice.appendChild(xmlDocument.createTextNode(price));
 
                 Element newProductSold = xmlDocument.createElement("productSold");
-                newProductSold.appendChild(xmlDocument.createTextNode(productSold));
+                newProductSold.appendChild(xmlDocument.createTextNode("0"));
 
                 Element newProductForSell = xmlDocument.createElement("productForSell");
                 newProductForSell.appendChild(xmlDocument.createTextNode(productForSell));
@@ -363,7 +359,7 @@ public class ProductsXmlManager {
         return false;
     }
 
-    public boolean deletePlantById(String productId) {
+    public boolean deleteProductById(String productId) {
         try {
             String expression = String.format("/products/product[@productId='%s']", productId);
 

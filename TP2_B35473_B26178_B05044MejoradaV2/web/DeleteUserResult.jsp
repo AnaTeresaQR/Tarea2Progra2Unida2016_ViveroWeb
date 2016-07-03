@@ -31,10 +31,10 @@
                 session.removeAttribute("user");
                 session.invalidate();
                 String msj = "EXITOSO,su cuenta se ha eliminado";
-                response.sendRedirect("index.jsp?msj=" + msj);
+                response.sendRedirect("index.jsp?msj=" + msj + "&optionselected=2");
             } else {
                 String msjfail = "FALLIDA, lo sentimos por favor intente de nuevo";
-                response.sendRedirect("DeleteUser.jsp?msjU=" + msjfail);
+                response.sendRedirect("DeleteUser.jsp?msj=" + msjfail + "&optionselected=1");
             }
         %>
     </body>

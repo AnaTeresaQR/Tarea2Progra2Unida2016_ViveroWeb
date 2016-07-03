@@ -13,6 +13,6 @@
 
         Product newProduct = mx.getProductById(idP);
         session.setAttribute("product", newProduct);
-        response.sendRedirect("AddProductToCart.jsp?id=" + idP + "&optionselect=2");
+        response.sendRedirect("AddProductToCart.jsp?id=" + idP);
     }
 %>

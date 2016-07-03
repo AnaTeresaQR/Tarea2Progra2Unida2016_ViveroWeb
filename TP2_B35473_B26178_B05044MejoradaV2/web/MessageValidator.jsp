@@ -6,15 +6,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    String msj = (String) request.getParameter("msj");
-    String optionS = (String) request.getParameter("optionselect").trim();
-    if (optionS != null) {
-        int valueSel = Integer.parseInt(optionS);
-        if (msj == null) {
-            msj = "";
-        } else {
-            switch (valueSel) {
-                case 1:
+    try {
+        String msj = (String) request.getParameter("msj");
+        String optionS = (String) request.getParameter("optionselect").trim();
+
+        if (optionS != null) {
+            int valueSel = Integer.parseInt(optionS);
+            if (msj == null) {
+                msj = "";
+            } else {
+                switch (valueSel) {
+                    case 1:
 %>
 <p><%=msj%></p>
 <%
@@ -23,9 +25,11 @@
 %>
 <script>alert('<%=msj%>');</script>
 <%
-                    break;
+                        break;
+                }
             }
         }
+    } catch (Exception e) {
     }
 %>
 
