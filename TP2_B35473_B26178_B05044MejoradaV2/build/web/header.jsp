@@ -13,10 +13,10 @@
     <a href="index.jsp" >
         <img id ="imageLogo" src="img/logo.png" width="80" height="70" alt="planta"/>
     </a>
-    <a href="index.jsp"><h1 id="tittle"> Vivero la Semilla Web </h1></a>
-
-    <%@include file="KeepSession.jsp" %>
+    <a id ="tittle" href="index.jsp"><h1> Vivero la Semilla Web </h1></a>
     <%@include file="Search.jsp" %>
+    <%@include file="KeepSession.jsp" %>
+
 </header>
 
 

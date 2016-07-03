@@ -22,7 +22,7 @@ body {
 #header {
     position: fixed;
     width: 97.2%;
-    height: 16%;
+    height: 14%;
     background: thistle;
     top: 8px;
     border: 10px solid darkblue;
@@ -34,6 +34,7 @@ body {
 
 #imageLogo {
     display: block;
+    width: 5%;
     float: left;
     margin-left: 20px;
     margin-top: 3.5px;
@@ -83,25 +84,22 @@ a {
 }
 
 .menu {
-    background-color: teal;
+    background-color: #009999;
     width: fit-content;
-    margin-top: 13%;
+    margin-top: 15%;
     padding:  16px;
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     text-align: center;
     color: white;
     width: 98.6%;
     height: 12%;
-    position: fixed;
-    bottom: 0; 
     background: transparent;
 }
 
 #linksFooter {
-    background: transparent;
     position: fixed;
     padding: 0;
     margin: 2px;
@@ -136,7 +134,7 @@ textarea {
 
 .products {
     padding:4px;
-    background:#fff;
+    background: #fff;
 }
 
 #account {

@@ -3,10 +3,10 @@
     text-align: center;
     background: mediumaquamarine;
     position: absolute;
-    margin-top: 13%;
+    margin-top: 11%;
     margin-left: 28%;
     margin-right: 35%;
-    width: 35%;
+    width: 37%;
     height: fit-content;
     border: 10px solid darkgreen;
     outline: 8px solid green;
@@ -19,9 +19,14 @@ label {
 
 #formSearch {
     position: absolute;
+    padding-left: 8%;
 }
 
 #contactUsForm {
     float: right;
     padding: 3%;
+}
+
+#showRegisterForm {
+    height: 60%;
 }

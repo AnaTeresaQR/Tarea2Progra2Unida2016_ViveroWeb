@@ -27,7 +27,14 @@
         <input  type="submit" value="Ingresar"/>
         <input type="reset" value="Vaciar Campos"/>
         <br><br/>
-        <p><%=(String) session.getAttribute("msj")%></p>
+
+        <%                String msj = (String) request.getParameter("msj");
+
+            if (msj == null) {
+                msj = "";
+            }
+        %>     
+        <p><%=msj%></p>
         <br><br/>
     </form>
 

@@ -21,11 +21,13 @@
     boolean result = controller.updateUser(userModelTemp);
     String resultUpdate = "";
     if (result) {
-        resultUpdate = " EXITOSO ";
         UserModel newUserModel = controller.loginUser(userModelTemp);
-        session.setAttribute("user", newUserModel);
+        session.setAttribute("user", userModelTemp);
+        String msj = "EXITOSO,sus datos se han modificado";
+        response.sendRedirect("index.jsp?msj=" + msj);
     } else {
-        resultUpdate = " FALLIDO, lo sentimos por favor intente de nuevo";
+        String msj = "FALLIDO, lo sentimos por favor intente de nuevo";
+        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=2" + "&msj=" + msj);
     }
 %>
 

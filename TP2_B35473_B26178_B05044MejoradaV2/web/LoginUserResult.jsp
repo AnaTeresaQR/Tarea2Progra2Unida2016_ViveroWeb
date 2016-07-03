@@ -13,8 +13,8 @@
     PrincipalController controller = new PrincipalController();
     UserModel newUserModel = controller.loginUser(userModelLoginTemp);
     if (newUserModel == null) {
-        session.setAttribute("msj", "FALLIDO, lo sentimos por favor intente de nuevo");
-        response.sendRedirect("UserLogin.jsp");
+        String msj = "FALLIDO, lo sentimos por favor intente de nuevo";
+        response.sendRedirect("UserLogin.jsp?msj=" + msj);
     }
     if (newUserModel != null) {
         session.setAttribute("user", newUserModel);

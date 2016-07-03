@@ -30,7 +30,8 @@
             if (result) {
                 session.removeAttribute("user");
                 session.invalidate();
-                response.sendRedirect("index.jsp");
+                String msj = "EXITOSO,su cuenta se ha eliminado";
+                response.sendRedirect("index.jsp?msj=" + msj);
             } else {
                 String msjfail = "FALLIDA, lo sentimos por favor intente de nuevo";
                 response.sendRedirect("DeleteUser.jsp?msjU=" + msjfail);

@@ -17,8 +17,7 @@
 <div id="global">
 
     <div id="listP">
-        <%
-            List<Product> searchP = (List<Product>) session.getAttribute("searchProducts");
+        <%            List<Product> searchP = (List<Product>) session.getAttribute("searchProducts");
 
             for (int i = 0; i < searchP.size(); i++) {
                 Product productSearch = searchP.get(i);

@@ -20,8 +20,8 @@
         controller.createUserModel(userModel);
         response.sendRedirect("UserLogin.jsp");
     } else {
-        session.setAttribute("msj", "No se pudo registrar, Intente de nuevo");
-        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=1");
+        String msj = "No se pudo registrar, Intente de nuevo";
+        response.sendRedirect("RegisterUpdateUser.jsp?typeValue=1" + "&msj=" + msj);
     }
 %>
 

@@ -1,5 +1,6 @@
 <footer id="footer">
     <h4 id="linksFooter">
+        <p>©TRE Co</p>
         <p> Copyright ©TRE Co. 2016 </p>
         <a href="https://www.facebook.com/edgardo.quiros.9" style="text-decoration:none">
             <img src="img/facebook.png" width="20" height="20" alt="facebook-app"/>

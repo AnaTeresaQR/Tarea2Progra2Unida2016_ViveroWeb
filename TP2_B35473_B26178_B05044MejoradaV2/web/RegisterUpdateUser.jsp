@@ -20,7 +20,7 @@
 
     <%--<a onclick="ocultarDiv('#showRegisterForm')">Cerrar</a>  --%>
 
-    <h2>Formulario de datos personales</h2>
+    <h3>Formulario de datos personales</h3>
 
     <form id="registerUserForm" onsubmit="" method="post" action="<%=urlAction%>" required>          
 
@@ -39,8 +39,14 @@
         <br><br/>
         <input type="submit" value="<%=valueSubmit%>"/>
         <input type="reset" value="Vaciar Campos"/>
-        <p><%=(String) session.getAttribute("msj")%></p>
-         <br><br/>
-    </form>
+        <%                String msj = (String) request.getParameter("msj");
 
+            if (msj == null) {
+                msj = "";
+            }
+        %>     
+        <p><%=msj%></p>
+        <br><br/>
+    </form>
     <%@include file="footer.jsp" %>
+

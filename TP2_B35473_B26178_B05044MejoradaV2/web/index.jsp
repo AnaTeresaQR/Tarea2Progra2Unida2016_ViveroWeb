@@ -16,4 +16,15 @@
 
 <%@include file="ContentTop10.jsp"%>
 
+<%    String msj = (String) request.getParameter("msj");
+
+    if (msj == null) {
+        msj = "";
+    } else {
+%>
+<script>alert('<%=msj%>');</script>
+<%
+    }
+%>
+
 <%@include file="footer.jsp"%>
