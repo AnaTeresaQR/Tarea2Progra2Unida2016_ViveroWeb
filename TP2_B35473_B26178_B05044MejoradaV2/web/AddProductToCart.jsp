@@ -1,7 +1,9 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
 <%@page import="xmlProducts.Product"%>
 <%@page import="xmlProducts.CartManager"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
+
 <%@include file="header.jsp" %>   
 
 <div id="menus">
@@ -14,7 +16,6 @@
     <%@include file="SessionMenu.jsp" %>
 </div>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
 
     <%        Product newProduct = (Product) session.getAttribute("product");
@@ -34,5 +35,18 @@
             <input id="ButtonAddProduct" type="submit" value="Confirmar"> 
         </form>
     </div>
+</div>
 
-    <%@include file="footer.jsp"%>
+
+<%@include file="footer.jsp"%>
+
+<%    String msj = (String) request.getParameter("msj");
+
+    if (msj == null) {
+        msj = "";
+    } else {
+%>
+<script>alert('<%=msj%>');</script>
+<%
+    }
+%>

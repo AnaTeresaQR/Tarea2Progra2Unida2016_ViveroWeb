@@ -20,13 +20,12 @@
             boolean add = cm.addToCart(amount, newProduct);
             response.sendRedirect("ShoppingCart.jsp");
         } else {
-
-            response.sendRedirect("AddProductToCart.jsp");
+            String msj = "No se encuentra disponible la cantidad de productos seleccionada"
+                    + "\nCantidad disponible: " + newProduct.getProductForSell();
+            response.sendRedirect("AddProductToCart.jsp?msj=" + msj);
         }
 
     }
-
-
 %>
 
 

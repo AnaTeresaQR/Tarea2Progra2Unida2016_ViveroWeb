@@ -99,10 +99,10 @@ a {
 }
 
 #linksFooter {
+    bottom: 0;
     position: fixed;
     padding: 0;
     margin: 2px;
-    bottom: 0;
     width: 100%;
 }
 

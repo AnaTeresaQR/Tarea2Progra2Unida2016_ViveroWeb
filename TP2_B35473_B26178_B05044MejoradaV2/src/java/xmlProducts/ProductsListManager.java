@@ -33,10 +33,11 @@ public class ProductsListManager {
 
         List<Product> listProducts = mx.getAllProducts();
         List<Product> listSearch = new ArrayList<>();
-
+        
         for (int i = 0; i < listProducts.size(); i++) {
             if (listProducts.get(i).getName().contains(word)
-                    || listProducts.get(i).getLongDescription().contains(word)) {
+                    || listProducts.get(i).getLongDescription().contains(word)
+                    ) {
                 listSearch.add(listProducts.get(i));
             }
         }
@@ -45,8 +46,8 @@ public class ProductsListManager {
 
     public static void main(String[] args) {
         ProductsListManager productsListManager = new ProductsListManager();
-        List<Product>  list = productsListManager.getSearch("products.xml", "flor");
-        
+        List<Product> list = productsListManager.getSearch("products.xml", "flor");
+
         System.out.println("" + list);
     }
 

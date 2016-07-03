@@ -32,7 +32,7 @@
             <p id="name">Nombre del producto: <%=product.getName()%></p>
             <p id="price"> Precio: <%=product.getPrice()%></p>
             <p>Cantidad: </p> 
-            <input type="number" name="newValue" value="<%=quantity%>" min="1"/>
+            <input type="number" name="newValue" value="<%=quantity%>" min="1" max="<%=product.getProductForSell()%>"/>
             <input type="hidden" name="id" value="<%=product.getProductId()%>" min="0"/>
 
             <p id="subTotal">Subtotal:<%= subTotal%> </p>
@@ -56,7 +56,7 @@
     <a href="index.jsp"> Seguir Comprando</a>
     </br>
     </br>
-    <a href=""> Realizar Factura</a>
+    <a href="">Procesar compra</a>
 
 
     <%

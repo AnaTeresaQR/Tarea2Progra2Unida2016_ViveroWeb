@@ -16,6 +16,9 @@
 
 <%@include file="ContentTop10.jsp"%>
 
+
+<%@include file="footer.jsp"%>
+
 <%    String msj = (String) request.getParameter("msj");
 
     if (msj == null) {
@@ -26,5 +29,3 @@
 <%
     }
 %>
-
-<%@include file="footer.jsp"%>

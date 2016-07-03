@@ -13,7 +13,8 @@
         session.setAttribute("searchProducts", listSearch);
         response.sendRedirect("ShowSearchProducts.jsp");
     } else {
-        response.sendRedirect("index.jsp");
+        String msj = "No hay producto que concuerde, intente de nuevo";
+        response.sendRedirect("index.jsp?msj=" + msj);
     }
 %>
 <p> Param:  <%=forSearch%> </p>
