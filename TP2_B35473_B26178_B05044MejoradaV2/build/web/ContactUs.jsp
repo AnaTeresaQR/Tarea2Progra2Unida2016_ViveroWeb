@@ -17,7 +17,7 @@
 
 <div id = "showConsultForm" class="formClass">
 
-    <%@include file="divDataContactUs.jsp" %>
+    <%@include file="DivDataContactUs.jsp" %>
 
     <%-- <a onclick="ocultarDiv('#showConsultForm')">Cerrar</a>  --%>
     <h1>Consultas</h1>
