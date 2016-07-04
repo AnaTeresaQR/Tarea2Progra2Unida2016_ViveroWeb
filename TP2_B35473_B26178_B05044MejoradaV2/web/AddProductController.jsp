@@ -1,7 +1,8 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="xmlProducts.Product"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
 <%@page import="objectModel.UserModel" %>
-
+<%request.setCharacterEncoding("utf-8");%>
 <%
     UserModel sessionUserT = (UserModel) session.getAttribute("user");
     if (sessionUserT == null) {

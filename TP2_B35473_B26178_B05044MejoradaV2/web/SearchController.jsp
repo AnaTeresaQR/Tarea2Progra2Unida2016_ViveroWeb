@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="xmlProducts.ProductsListManager"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>

@@ -16,7 +16,22 @@ function convertNumCard() {
         }
     }
     document.getElementById("numcard").value = stringFinal;
+}
 
+function NumCardSize(input) {
+     var expNick = new RegExp("[0-9]{12}");
+    if (expNick.test(input.value)) {
+        input.setCustomValidity('');
+        return true;
+    } else {
+        input.setCustomValidity("La cantidad de números no tiene formato correcto");
+        input.focus();
+        return false;
+    }
+}
+
+function exportPDF() {
+    window.open("BuildBill.jsp");
 }
 
 

@@ -1,6 +1,7 @@
 
 <header id="header">     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <%request.setCharacterEncoding("utf-8");%>
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="ValidateObjAttributes.js" type="text/javascript"></script>
     <script src="ConfirmActionForm.js" type="text/javascript"></script>

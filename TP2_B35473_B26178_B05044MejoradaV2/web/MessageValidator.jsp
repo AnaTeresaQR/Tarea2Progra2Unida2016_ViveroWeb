@@ -1,8 +1,4 @@
-<%-- 
-    Document   : MessageValidator
-    Created on : 02/07/2016, 11:54:30 PM
-    Author     : Ana Teresa
---%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%

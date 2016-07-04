@@ -1,12 +1,7 @@
-<%-- 
-    Document   : ShowBill
-    Created on : 03/07/2016, 12:17:44 PM
-    Author     : Edgardo Quirós
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
+<!DOCTYPE html>
+<script src="js/EncriptNumCard.js" type="text/javascript"></script>
 
 <%@include file="header.jsp" %>
 
@@ -23,7 +18,7 @@
 <div class="formClass">
 
     <iframe src="BuildBill.jsp" width="400px" height="400px"></iframe>
-
+    <button onclick="exportPDF()">Exportar</button>
 </div>
 
 <%@include file="footer.jsp"%>

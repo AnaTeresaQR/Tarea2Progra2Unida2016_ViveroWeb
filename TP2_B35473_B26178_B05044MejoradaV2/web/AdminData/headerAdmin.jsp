@@ -1,6 +1,6 @@
 <header id="header">     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+    <%request.setCharacterEncoding("utf-8");%>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="../javaScriptJQueryMethod.js" type="text/javascript"></script>
     <script type="text/javascript" src="../ValidateObjAttributes.js"></script>

@@ -1,13 +1,12 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="objectModel.UserModel"%>
 <%@page import="buy.CartManager"%>
 <%@page import="objectModel.Bill_Model"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.BillController"%>
 <!DOCTYPE html>
 
 <jsp:useBean id="billSession" scope="session" class="objectModel.Bill_Model" />
-
+<%request.setCharacterEncoding("utf-8");%>
 <%
     try {
         String typeCard = (String) request.getParameter("selectTypeCard");
