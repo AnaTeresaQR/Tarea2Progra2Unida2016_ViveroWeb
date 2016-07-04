@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="xmlProducts.Product"%>
 <%@include file="header.jsp" %> 
 
@@ -11,8 +12,6 @@
     <%@include file="SessionMenu.jsp" %>
 </div>
 
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
 
     <div id="top10">

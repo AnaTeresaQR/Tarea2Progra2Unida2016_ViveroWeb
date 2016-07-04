@@ -30,7 +30,7 @@
         <textarea id ="longDescription" name="longDescription" placeholder="Digite una descripción detallada para el producto"  rows="10" cols="40" required></textarea>
         <br/>
         <label>Precio del producto:</label> 
-        <input type="text" id ="productPrice" name="productPrice" placeholder="Ingrese el precio del producto" required/>
+        <input type="number" id ="productPrice" name="productPrice" placeholder="Ingrese el precio del producto" required/>
         <br/>
         <label>Cantidad disponible de productos:</label> 
         <input id="productsForSell"  name="productsForSell" type="number" min="0" max="99">

@@ -1,6 +1,5 @@
-
-<%@page import="objectModel.Bill_Model"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="objectModel.Bill_Model"%>
 <!DOCTYPE html>
 
 
@@ -38,6 +37,7 @@
         </p>
 
         <input type="submit" value="Finalizar compra" />
+        <br>
         <br>
     </form>
 </div>

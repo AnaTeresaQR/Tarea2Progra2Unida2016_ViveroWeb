@@ -1,19 +1,8 @@
-<%-- 
-    Document   : ContactUsController
-    Created on : 17/06/2016, 06:46:37 PM
-    Author     : Ana Teresa
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="controller.ConsultController" %>
 <%@page  import="objectModel.ConsultModel" %>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+
         <%request.setCharacterEncoding("utf-8");%>
         <jsp:useBean id="consultModel" scope="page" class="objectModel.ConsultModel"/>
 
@@ -32,5 +21,4 @@
                 response.sendRedirect("ContactUs.jsp?msj=" + messageConsult + "&optionselect=1");
             }
         %>
-    </body>
-</html>
+

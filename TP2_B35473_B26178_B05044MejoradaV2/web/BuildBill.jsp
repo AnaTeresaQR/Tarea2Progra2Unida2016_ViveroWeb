@@ -1,9 +1,4 @@
-<%-- 
-    Document   : BuildBill
-    Created on : 02/07/2016, 08:39:32 AM
-    Author     : Edgardo Quirós
---%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="net.sf.jasperreports.export.SimpleOutputStreamExporterOutput"%>
 <%@page import="net.sf.jasperreports.export.SimpleExporterInput"%>
 <%@page import="net.sf.jasperreports.engine.export.JRPdfExporter"%>
@@ -12,7 +7,6 @@
 <%@page import="net.sf.jasperreports.engine.*"%>
 <%@page import="java.io.File"%>
 <%@page import="DataBase.DataBaseManager"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
 <jsp:useBean id="billSession" scope="session" type="objectModel.Bill_Model" />

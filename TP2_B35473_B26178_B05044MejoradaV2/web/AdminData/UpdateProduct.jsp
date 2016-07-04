@@ -1,5 +1,4 @@
 
-<%@include file="headerAdmin.jsp" %>
 <%@page import="xmlProducts.ProductsXmlManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="headerAdmin.jsp" %>
@@ -33,7 +32,7 @@
         <textarea id ="longDescription" name="longDescription" placeholder="Digite una descripción detallada para el producto"  rows="10" cols="40" required></textarea>
         <br><br/>
         <label>Precio del producto:</label> 
-        <input type="text" id ="productPrice" name="productPrice" placeholder="Ingrese el precio del producto" required/>
+        <input type="number" id ="productPrice" name="productPrice" placeholder="Ingrese el precio del producto" required/>
         <br><br/>
         <label>Cantidad disponible de productos:</label> 
         <input id="productsForSell"  name="productsForSell" type="number" min="0" max="99">

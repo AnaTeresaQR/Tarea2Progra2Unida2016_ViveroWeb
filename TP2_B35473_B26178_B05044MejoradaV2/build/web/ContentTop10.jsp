@@ -1,9 +1,9 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="xmlProducts.Product"%>
 <%@page import="java.util.List"%>
 <%@page import="xmlProducts.ProductsXmlManager"%>
 <%@page import="xmlProducts.ProductsListManager"%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div id="global">
 
     <div id="top10">
