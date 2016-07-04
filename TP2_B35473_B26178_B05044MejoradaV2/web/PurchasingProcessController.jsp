@@ -47,23 +47,22 @@
 <jsp:setProperty name="billSession" property="total" value="<%=billUser.getTotal()%>" />
 
 <%
-                    response.sendRedirect("ConfirmPurchase.jsp");
-                }
-            } else {
-                String msj = "No es posible procesar su factura,\nPor favor Intente de nuevo";
-                response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
+                response.sendRedirect("ConfirmPurchase.jsp");
             }
-
         } else {
-            String msj = "No se puede continuar el proceso de la factura,\nPor favor Intente de nuevo";
+            String msj = "No es posible procesar su factura,\nPor favor Intente de nuevo";
             response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
         }
 
-    } catch (Exception e) {
-        //  String msj = "Algunos de sus datos no pueden ser procesados,\nPor favor Intente de nuevo";
-        // response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
-        e.printStackTrace();
+    } else {
+        String msj = "No se puede continuar el proceso de la factura,\nPor favor Intente de nuevo";
+        response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
     }
+
+} catch (Exception e) {
+      String msj = "Algunos de sus datos no pueden ser procesados,\nPor favor Intente de nuevo";
+      response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
+}
 %>
 <%--
 <p>

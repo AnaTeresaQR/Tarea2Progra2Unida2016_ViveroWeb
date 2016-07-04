@@ -4,15 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import xmlProducts.Product;
 
-/**
- *
- * @author rosan
- */
 public class CartManager {
 
     private static CartManager cart;
-    private final List<Product> products = new ArrayList<>();
-    private final List<Integer> quantity = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
+    private List<Integer> quantity = new ArrayList<>();
 
     public static CartManager getInstance() {
         if (cart == null) {
@@ -109,18 +105,8 @@ public class CartManager {
         return productsList;
     }
 
-    public static void main(String args[]) {
-        CartManager cm = new CartManager();
-        Product p = new Product();
-        Product p1 = new Product();
-        Product p2 = new Product();
-
-        p.setName("");
-        p1.setName("ss");
-
-        cm.addToCart(1, p);
-        System.out.println(cm.addToCart(2, p));
-        //  System.out.println(cm.getProductsCart().size()+""+cm.getQuantityCart().size());
+    public void clean() {
+        products = new ArrayList<>();
+        quantity = new ArrayList<>();
     }
-
 }

@@ -1,3 +1,4 @@
+<%@page import="buy.CartManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -14,6 +15,11 @@
 <div   id="userMenu" >
     <%@include file="SessionMenu.jsp" %>
 </div>
+
+<%    CartManager cm = CartManager.getInstance();
+    cm.clean();
+    
+%>
 
 <div class="formClass">
 
