@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6a20780-0388-4416-8133-ac7527c3cd7d">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6a20780-0388-4416-8133-ac7527c3cd7d">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="177"/>
-	<parameter name="Factura" class="java.lang.String"/>
+	<property name="ireport.y" value="169"/>
+	<parameter name="Bill_Id" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      bill.`id` AS bill_id,
@@ -28,8 +28,7 @@ FROM
      `registeruser` registeruser INNER JOIN `bill` bill ON registeruser.`id` = bill.`idUser`
 
 WHERE
-bill.`id`=$P{Factura}
-]]>
+bill.`id`=$P{Bill_Id}]]>
 	</queryString>
 	<field name="bill_id" class="java.lang.Integer"/>
 	<field name="bill_idUser" class="java.lang.Integer"/>
@@ -65,6 +64,10 @@ bill.`id`=$P{Factura}
 				</textElement>
 				<text><![CDATA[TRE co]]></text>
 			</staticText>
+			<image>
+				<reportElement x="41" y="7" width="47" height="36" uuid="c8ec776d-2d1f-4fe2-a78c-161b6476bf8a"/>
+				<imageExpression><![CDATA["C:\\Users\\Edgardo Quirós\\Desktop\\Tarea2Progra2Unida2016_ViveroWeb-master\\TP2_B35473_B26178_B05044MejoradaV2\\web\\img\\logo.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -83,7 +86,7 @@ bill.`id`=$P{Factura}
 			</textField>
 			<staticText>
 				<reportElement x="291" y="15" width="100" height="20" uuid="d3aac581-6976-4757-b6a4-b1247356a406"/>
-				<text><![CDATA[cedula]]></text>
+				<text><![CDATA[Cedula]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="352" y="15" width="139" height="20" uuid="c6e97ba8-af1c-497d-947f-ce55c55177b5"/>
@@ -110,11 +113,11 @@ bill.`id`=$P{Factura}
 	<columnHeader>
 		<band height="83" splitType="Stretch">
 			<staticText>
-				<reportElement x="318" y="10" width="100" height="20" uuid="9e55a2f4-320b-44a7-a28a-27c2e648b14b"/>
+				<reportElement x="266" y="10" width="100" height="20" uuid="9e55a2f4-320b-44a7-a28a-27c2e648b14b"/>
 				<text><![CDATA[Numero de Tarjeta]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="418" y="10" width="100" height="20" uuid="104d6593-821e-4b8d-8d69-512c95157eb0"/>
+				<reportElement x="366" y="10" width="100" height="20" uuid="104d6593-821e-4b8d-8d69-512c95157eb0"/>
 				<textFieldExpression><![CDATA[$F{bill_numCard}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -144,17 +147,20 @@ bill.`id`=$P{Factura}
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="193" splitType="Stretch">
+		<band height="434" splitType="Stretch">
 			<textField>
-				<reportElement x="28" y="34" width="462" height="88" uuid="24acb8bc-d227-40e4-a3e3-7b4f4be3c768"/>
+				<reportElement x="41" y="46" width="437" height="132" uuid="24acb8bc-d227-40e4-a3e3-7b4f4be3c768"/>
 				<textFieldExpression><![CDATA[$F{bill_products}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="27" y="15" width="463" height="20" uuid="ec5541cc-a951-4907-9d51-71465e2f7b3e"/>
-				<text><![CDATA[Descripcion de los productos]]></text>
+				<reportElement x="30" y="15" width="460" height="20" uuid="ec5541cc-a951-4907-9d51-71465e2f7b3e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                                 Descripcion de los productos]]></text>
 			</staticText>
 			<line>
-				<reportElement x="28" y="14" width="1" height="108" uuid="226f0bcb-1edf-4472-ab16-0e37ddb97662"/>
+				<reportElement x="29" y="15" width="1" height="176" uuid="226f0bcb-1edf-4472-ab16-0e37ddb97662"/>
 			</line>
 			<line>
 				<reportElement x="29" y="34" width="462" height="1" uuid="34cf38e9-1818-4b33-8d43-66798ab785e8"/>
@@ -163,43 +169,43 @@ bill.`id`=$P{Factura}
 				<reportElement x="29" y="14" width="461" height="1" uuid="00fbb372-b883-4db1-8394-0e3837a8be85"/>
 			</line>
 			<line>
-				<reportElement x="29" y="122" width="462" height="1" uuid="fd9fc476-2cb3-4337-a917-907949c4c348"/>
+				<reportElement x="29" y="191" width="462" height="1" uuid="fd9fc476-2cb3-4337-a917-907949c4c348"/>
 			</line>
 			<line>
-				<reportElement x="490" y="14" width="1" height="149" uuid="8898957a-22ba-4437-947a-4a2c56651cdd"/>
+				<reportElement x="490" y="14" width="1" height="217" uuid="8898957a-22ba-4437-947a-4a2c56651cdd"/>
 			</line>
 			<staticText>
-				<reportElement x="321" y="123" width="70" height="20" uuid="5abf9af4-3f35-4375-beae-a20aea159cb4"/>
+				<reportElement x="320" y="193" width="70" height="20" uuid="5abf9af4-3f35-4375-beae-a20aea159cb4"/>
 				<text><![CDATA[SubTotal]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="321" y="143" width="70" height="20" uuid="2d578ae4-ef5a-4aa6-99f8-28ca0cf80c13"/>
+				<reportElement x="322" y="212" width="70" height="20" uuid="2d578ae4-ef5a-4aa6-99f8-28ca0cf80c13"/>
 				<text><![CDATA[Total]]></text>
 			</staticText>
 			<line>
-				<reportElement x="318" y="143" width="173" height="1" uuid="96013640-41d3-453b-948b-1f8af5c54984"/>
+				<reportElement x="320" y="212" width="169" height="1" uuid="96013640-41d3-453b-948b-1f8af5c54984"/>
 			</line>
 			<line>
-				<reportElement x="321" y="163" width="170" height="1" uuid="d7d409b4-3b7e-4684-a943-8fb6433daa60"/>
+				<reportElement x="320" y="231" width="170" height="1" uuid="d7d409b4-3b7e-4684-a943-8fb6433daa60"/>
 			</line>
 			<line>
-				<reportElement x="321" y="122" width="1" height="42" uuid="6109f7fd-6152-4e13-8e2a-39bcec007743"/>
+				<reportElement x="321" y="193" width="1" height="38" uuid="6109f7fd-6152-4e13-8e2a-39bcec007743"/>
 			</line>
 			<textField>
-				<reportElement x="391" y="122" width="100" height="20" uuid="81e2ae70-d8b3-4241-be6b-b9a08fd1540a"/>
+				<reportElement x="391" y="192" width="100" height="20" uuid="81e2ae70-d8b3-4241-be6b-b9a08fd1540a"/>
 				<textFieldExpression><![CDATA[$F{bill_subtotal}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="390" y="144" width="100" height="20" uuid="cfff949e-d62e-446f-bd58-56d3688ae486"/>
+				<reportElement x="390" y="212" width="100" height="20" uuid="cfff949e-d62e-446f-bd58-56d3688ae486"/>
 				<textFieldExpression><![CDATA[$F{bill_total}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="13" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="12" splitType="Stretch"/>
+		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band height="60" splitType="Stretch">
@@ -208,8 +214,8 @@ bill.`id`=$P{Factura}
 				<text><![CDATA[Factura #]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="455" y="14" width="100" height="20" uuid="9cca71ed-03f7-4735-8d59-d0ead3e0d32a"/>
-				<textFieldExpression><![CDATA[$P{Factura}]]></textFieldExpression>
+				<reportElement x="455" y="14" width="100" height="20" uuid="5dbdcfea-576e-4e60-928e-fa67ff577db5"/>
+				<textFieldExpression><![CDATA[$P{Bill_Id}]]></textFieldExpression>
 			</textField>
 		</band>
 	</summary>
