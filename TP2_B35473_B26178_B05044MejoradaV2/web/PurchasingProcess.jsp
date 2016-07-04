@@ -20,8 +20,8 @@
     <form method="post" action="PurchasingProcessController.jsp" required>
         <br>
         <select name="selectTypeCard" size="1">
-            <option name="debit" value="debit">Débito</option>
-            <option name="credit" value="credit">Crédito</option>         
+            <option name="debit" value="Debito">Débito</option>
+            <option name="credit" value="Credito">Crédito</option>         
         </select>
         <br><br>
         <select name="selectEntityCard" size="1">

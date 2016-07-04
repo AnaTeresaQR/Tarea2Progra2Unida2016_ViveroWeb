@@ -12,9 +12,9 @@
     try {
         String typeCard = (String) request.getParameter("selectTypeCard");
         String entityCard = (String) request.getParameter("selectEntityCard");
-        String provinceSelect = (String) request.getParameter("province");
-        String cantonSelect = (String) request.getParameter("canton");
-        String districtSelect = (String) request.getParameter("district");
+        String provinceSelect = (String) request.getParameter("province").trim();
+        String cantonSelect = (String) request.getParameter("canton").trim();
+        String districtSelect = (String) request.getParameter("district").trim();
         String completeLocation = (String) request.getParameter("location");
         String numCard = (String) request.getParameter("numcard");
         String expDateCard = (String) request.getParameter("expDate");

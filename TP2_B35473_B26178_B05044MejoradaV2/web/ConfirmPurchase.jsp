@@ -19,7 +19,10 @@
 <jsp:useBean id="billSession" scope="session" type="objectModel.Bill_Model" />
 
 <div  class="formClass">
-    <form method="post" action="ShowBill.jsp" required>
+    <%
+    String msj = "Compra realizada exitosamente";
+    %>
+    <form method="post" action="ShowBill.jsp?msj=<%=msj + "&optionselect=2"%> " required>
 
         <p>
             Productos:<br><%=billSession.getProducts()%>
