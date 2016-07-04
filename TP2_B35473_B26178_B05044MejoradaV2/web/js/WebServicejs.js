@@ -9,15 +9,18 @@ $(document).ready(function () {
     loadProvince();
 });
 
-
-function returnVars() {
+function setDistrict() {
     var selectBox = document.getElementById("district");
     currentDistrictSelect = selectBox.options[selectBox.selectedIndex].value;
-    if (!currentProvinceSelect
-            && !currentCantonSelect
-            && !currentDistrictSelect) {
-        var p = document.getElementById("impresion");
-        alert('p.innerText = currentProvinceSelect + " " + currentCantonSelect + " " + currentDistrictSelect + " "');
+    returnVars();
+}
+
+function returnVars() {
+    if (currentProvinceSelect !== ""
+            && currentCantonSelect !== ""
+            && currentDistrictSelect !== "") {
+        var p = document.getElementById("print");
+        p.innerText = currentProvinceSelect + " " + currentCantonSelect + " " + currentDistrictSelect + " ";
     }
 }
 
@@ -71,6 +74,7 @@ function loadDistrict() {
         timeout: 10000,
         success: function (datos) {
             processDistricts(datos);
+            setDistrict();
         },
         error: function (x, t, m) {
             messageError(x, t, m);

@@ -101,6 +101,14 @@ public class CartManager {
         products.remove(index);
     }
 
+    public String getListProducts() {
+        String productsList = "";
+        for (int i = 0; i < products.size(); i++) {
+            productsList += quantity.get(i) + " " + products.get(i) + " " + getSubTotalProduct(i) + "\n";
+        }
+        return productsList;
+    }
+
     public static void main(String args[]) {
         CartManager cm = new CartManager();
         Product p = new Product();

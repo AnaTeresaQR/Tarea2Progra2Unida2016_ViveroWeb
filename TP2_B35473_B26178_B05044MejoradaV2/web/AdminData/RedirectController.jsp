@@ -4,31 +4,27 @@
 <!DOCTYPE html>
 
 <%
-    String urlA = "";
-    String emailS;
+    String emailSessionAdmin = "";
     try {
         Administrator adminSession = (Administrator) session.getAttribute("admin");
         if (adminSession == null) {
-            urlA = "AdminLogin.jsp";
-            emailS = "No has iniciado Sesión";
+            emailSessionAdmin = "No has iniciado Sesión";
 %>
 <div id="account">
 
-    <p><%=emailS%></P>
+    <p><%=emailSessionAdmin%></P>
 </div>
 <%
 } else {
-    urlA = "ProductsAdministrator.jsp";
-    emailS = adminSession.getEmail();
+    emailSessionAdmin = adminSession.getEmail();
 %>
 <div id="account">
 
-    <p> Hola: <%=emailS%></P>
+    <p> Hola: <%=emailSessionAdmin%></P>
 </div>
 <%
         }
     } catch (Exception e) {
-        urlA = "AdminLogin.jsp";
     }
 %>
 

@@ -56,7 +56,7 @@
     <a href="index.jsp"> Seguir Comprando</a>
     </br>
     </br>
-    <a href="">Procesar compra</a>
+    <a href="PurchasingProcess.jsp">Procesar compra</a>
 
 
     <%

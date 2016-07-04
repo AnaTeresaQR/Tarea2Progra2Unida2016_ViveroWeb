@@ -8,11 +8,9 @@
     <link href="../FormCss.css" rel="stylesheet" type="text/css"/>
 
     <%@include file="RedirectController.jsp" %>
+    <img id ="imageLogo" src="../img/logo.png" width="80" height="70" alt="planta"/>
 
-    <a href="<%=urlA%>" >
-        <img id ="imageLogo" src="../img/logo.png" width="80" height="70" alt="planta"/>
-    </a>
-    <a href="<%=urlA%>"><h1 id="tittle"> Vivero la Semilla Web </h1></a>
+    <h1 id="tittle"> Vivero la Semilla Web </h1></a>
 </header>
 
 

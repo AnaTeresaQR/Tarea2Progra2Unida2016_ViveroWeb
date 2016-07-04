@@ -32,17 +32,20 @@
         <br>
         <label for="province">Provincia</label>
         <select id="province"  name="province" size="1" onchange="loadCanton();">
+            <option name="selection" value="selection">Seleccione</option>
         </select>
         <br>
         <label for="canton">Cantón</label>
         <select id="canton" name="canton" size="1" onchange="loadDistrict();">
+            <option name="selection" value="selection">Seleccione</option>
         </select>
         <br>
         <label for="district">Distrito</label>
-        <select id="district" name="district" size="1" onchange="returnVars();">
+        <select id="district" name="district" size="1" onchange="setDistrict();">
+            <option name="selection" value="selection">Seleccione</option>
         </select>
         <br><br>
-        <input type="text" id ="senna" name="senna" placeholder="Datos extras de localidad" required/>
+        <input type="text" id ="location" name="location" placeholder="Datos extras de localidad" required/>
         <br>
         <label>Número de Tarjeta SINPE:</label>
         <br>
@@ -51,13 +54,12 @@
         <label>Fecha expiración de tarjeta:</label>
         <br>
         <input type="text" id ="expDate" name="expDate" placeholder="ejemplo 06/23" required/>
-
-        <p id="impresion">Resultado:</p>
-
+        <p  id="print" name="print" ></p>
         <input type="submit" value="Confirmar compra" />
         <input type="reset" value="Vaciar Campos"/>
         <br><br>
     </form>
 </div>
 
-<%@include file="footer.jsp" %>
+<%@include file="MessageValidator.jsp"%>
+        
