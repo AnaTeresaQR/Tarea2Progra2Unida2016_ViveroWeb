@@ -1,0 +1,98 @@
+#adminForm{
+    float: left;
+    text-align: center;
+    background: mediumaquamarine;
+    margin-top: 12%;
+    margin-left: 28%;
+    margin-right: 35%;
+    width: 35%;
+    height: fit-content;
+    border: 10px solid darkgreen;
+    outline: 8px solid green;
+}
+
+.buttonsAction{
+    font-size:10px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:white;
+    background:green;
+    border:0px;
+    width:118px;
+    height:19px;
+}
+body {
+    background-image: url("../img/fengshui.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
+}
+textarea {
+    resize: none;
+}
+#showProduct {
+    float: left;
+    text-align: center;
+    background: mediumaquamarine;
+    margin-top: 12%;
+    margin-left: 5%;
+    margin-right: 35%;
+    margin-bottom: 8%;
+    width: 88%;
+    height: fit-content;
+    border: 10px solid darkgreen;
+    outline: 8px solid green;
+}
+#header {
+    position: fixed;
+    width: 97.2%;
+    height: 14%;
+    background: thistle;
+    top: 8px;
+    border: 10px solid darkblue;
+    outline: 5px solid darkcyan;
+    background-image: url("../img/fondoHeader.jpg");
+    background-repeat: round;
+
+}
+#tittle {  
+    color: #006666; 
+    text-align: center;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+#imageLogo {
+    display: block;
+    width: 5%;
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+    margin-bottom: 1%;
+    background: white;
+}
+#footer {
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 94%;
+    height: 6%;
+    position: fixed;
+    bottom: 0; 
+    background: transparent;
+}
+
+#account {
+    color: white;
+    background: #009999;
+    margin-right:3%;
+    margin-top: 2%;
+    float: right;
+    width: fit-content;
+    height: fit-content;
+}
+
+#ImagesP {
+    padding: 3%;
+}
+
+

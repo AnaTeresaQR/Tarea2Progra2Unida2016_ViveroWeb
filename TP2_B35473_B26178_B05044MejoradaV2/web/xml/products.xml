@@ -526,7 +526,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/fungicida.png</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/fungicida2.jpg</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="49">
         <name>Abrillantador orgánico de plantas</name>
@@ -537,7 +537,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/abrillantador.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/abrillantador2.jpg</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="50">
         <name>Quelato de hierro orgánico</name>
@@ -548,7 +548,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/quelato.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/quelato2.jpg</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="51">
         <name>Fertilizante orgánico</name>
@@ -559,7 +559,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/fertilizante.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/fertilizante2.jpg</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="52">
         <name>Humus de lombriz</name>
@@ -570,7 +570,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/humus.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/humus2.png</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="53">
         <name>Mejorador de suelos</name>
@@ -581,7 +581,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/mejoradorSuelos.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/mejoradorSuelos2.jpg</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="54">
         <name>Compost orgánico</name>
@@ -592,7 +592,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/compost.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/compost2.png</urlPicture2>
-        <urlPicture3>urlproduct3</urlPicture3>
+        <urlPicture3>urlProduct3</urlPicture3>
     </product>
     <product category="Producto organico" productId="55">
         <name>Mantillo orgánico</name>
@@ -602,8 +602,8 @@
         <productSold>0</productSold>
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/mantillo.jpg</urlPicture1>
-        <urlPicture2>urlpicture2</urlPicture2>
-        <urlPicture3>urlpicture3</urlPicture3>
+        <urlPicture2>urlPicture2</urlPicture2>
+        <urlPicture3>urlPicture3</urlPicture3>
     </product>
     <product category="Producto organico" productId="56">
         <name>Insecticida orgánico bacillus</name>
@@ -614,7 +614,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/bacillus.jpg</urlPicture1>
         <urlPicture2>urlPicture2</urlPicture2>
-        <urlPicture3>urlpicture3</urlPicture3>
+        <urlPicture3>urlPicture3</urlPicture3>
     </product>
     <product category="Producto organico" productId="57">
         <name>Fortalecedor orgánico de plantas</name>
@@ -636,7 +636,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/semillaSandia.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/semillaSandia2.jpg</urlPicture2>
-        <urlPicture3>urlpicture3</urlPicture3>
+        <urlPicture3>urlPicture3</urlPicture3>
     </product>
     <product category="Producto organico" productId="59">
         <name>Semillas orgánicas de maíz</name>
@@ -647,7 +647,7 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/semillaMaiz.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/semillaMaiz2.jpg</urlPicture2>
-        <urlPicture3>urlpicture3</urlPicture3>
+        <urlPicture3>urlPicture3</urlPicture3>
     </product>
     <product category="Producto organico" productId="60">
         <name>Semillas orgánicas de pepino</name>
@@ -658,6 +658,6 @@
         <productForSell>10</productForSell>
         <urlPicture1>productsPicture/organicProductsGarden/semillaPepino.jpg</urlPicture1>
         <urlPicture2>productsPicture/organicProductsGarden/semillaPepino2.jpg</urlPicture2>
-        <urlPicture3>urlpicture3</urlPicture3>
+        <urlPicture3>urlPicture3</urlPicture3>
     </product>
 </products>

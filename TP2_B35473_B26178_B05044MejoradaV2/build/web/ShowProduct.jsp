@@ -25,10 +25,20 @@
         <br>
 
         <img src="<%= productSession.getUrlPicture1()%>" width="350" height="300" alt="top1"/>
+
+
+        <%
+            // en el caso de no encontrar la imagen no la muestra en la página
+            if (!productSession.getUrlPicture2().equalsIgnoreCase("urlProduct2") || !productSession.getUrlPicture2().equalsIgnoreCase("urlPicture2")) {
+        %>
         <img src="<%= productSession.getUrlPicture2()%>" width="350" height="300" alt="top2"/>
         <%
-        // en el caso de no encontrar la imagen no la muestra en la página
-            if (!productSession.getUrlPicture3().equals("urlproduct3")) {
+            }
+        %>
+
+        <%
+            // en el caso de no encontrar la imagen no la muestra en la página
+            if (!productSession.getUrlPicture3().equalsIgnoreCase("urlProduct3") || !productSession.getUrlPicture3().equalsIgnoreCase("urlPicture3")) {
         %>
         <img src="<%= productSession.getUrlPicture3()%>" width="350" height="300" alt="top3"/>
         <%
