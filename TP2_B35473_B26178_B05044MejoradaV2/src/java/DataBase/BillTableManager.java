@@ -16,7 +16,7 @@ public class BillTableManager {
         this.connectionManager = new DataBaseManager();
     }
 
-    public void addBill(Bill_Model bill) throws SQLException {
+    public Bill_Model addBill(Bill_Model bill) throws SQLException {
 
         int idUser = bill.getUser().getId();
         String addressUser = connectionManager.sqlFormat(bill.getAddressUser());
@@ -33,6 +33,8 @@ public class BillTableManager {
                 + ", " + addressUser + ", curdate()" + ", " + numCard + ", " + typeCard + ", " + dateExp + ", " + creditInstitution + ", " + products + ", " + subtotal + ", " + total + ")";
 
         connectionManager.executeUpdateDB(sql);
+        bill.setId(connectionManager.scopeIdentityBill());
+        return bill;
     }
 
     public void deleteBill(int idUser) throws SQLException {

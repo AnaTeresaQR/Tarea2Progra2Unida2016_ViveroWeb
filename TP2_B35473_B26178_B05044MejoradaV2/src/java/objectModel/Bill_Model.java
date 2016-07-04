@@ -53,12 +53,17 @@ public class Bill_Model {
         this.total = total;
     }
 
-    public boolean createModel() {
+    public int createModel() {
         try {
-            dataBaseManager.addBill(this);
-            return true;
+            Bill_Model billCurrent = dataBaseManager.addBill(this);
+            if (billCurrent != null) {
+                this.id = billCurrent.getId();
+                return this.id;
+            } else {
+                return 0;
+            }
         } catch (SQLException ex) {
-            return false;
+            return 0;
         }
     }
 

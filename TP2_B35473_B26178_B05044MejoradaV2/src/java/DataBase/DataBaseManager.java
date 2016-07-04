@@ -68,4 +68,17 @@ public class DataBaseManager {
         return rs;
     }
 
+    public int scopeIdentityBill() throws SQLException {
+        String sql = "SELECT max(id) as id from bill";
+        ResultSet rs = executeQueryDB(sql);
+
+        while (rs.next()) {
+          
+            int identity = (int) rs.getObject("id");
+            System.out.println("identity: " + identity);
+            return identity;
+        }
+        return 0;
+    }
+
 }
