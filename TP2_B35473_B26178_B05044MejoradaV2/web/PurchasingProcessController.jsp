@@ -6,6 +6,8 @@
 <%@page import="controller.BillController"%>
 <!DOCTYPE html>
 
+<jsp:useBean id="billSession" scope="session" class="objectModel.Bill_Model" />
+
 <%
     try {
         String typeCard = (String) request.getParameter("selectTypeCard");
@@ -25,13 +27,28 @@
         boolean continueShopping = billController.validateInputs(typeCard, entityCard, provinceSelect, cantonSelect, districtSelect, completeLocation, numCard, expDateCard);
         if (continueShopping) {
             CartManager cm = CartManager.getInstance();
+
             Bill_Model billUser = new Bill_Model(userInSession, completeDirection, numCard, typeCard, expDateCard, entityCard, cm.getListProducts(), cm.getSubTotal(), cm.getTotal());
+
             if (billUser != null) {
                 boolean resultBill = billController.createBillModel(billUser);
                 if (resultBill) {
 %>
-<p>entro</p>
+
+<jsp:setProperty name="billSession" property="id" value="<%=billUser.getId()%>" />
+<jsp:setProperty name="billSession" property="user" value="<%=billUser.getUser()%>" />
+<jsp:setProperty name="billSession" property="addressUser" value="<%=billUser.getAddressUser()%>" />
+<jsp:setProperty name="billSession" property="billDate" value="<%=billUser.getBillDate()%>" />
+<jsp:setProperty name="billSession" property="numCard" value="<%=billUser.getNumCard()%>" />
+<jsp:setProperty name="billSession" property="typeCard" value="<%=billUser.getTypeCard()%>" />
+<jsp:setProperty name="billSession" property="dateExp" value="<%=billUser.getDateExp()%>" />
+<jsp:setProperty name="billSession" property="creditInstitution" value="<%=billUser.getCreditInstitution()%>" />
+<jsp:setProperty name="billSession" property="products" value="<%=billUser.getProducts()%>" />
+<jsp:setProperty name="billSession" property="subtotal" value="<%=billUser.getSubtotal()%>" />
+<jsp:setProperty name="billSession" property="total" value="<%=billUser.getTotal()%>" />
+
 <%
+                    response.sendRedirect("ConfirmPurchase.jsp");
                 }
             } else {
                 String msj = "No es posible procesar su factura,\nPor favor Intente de nuevo";
