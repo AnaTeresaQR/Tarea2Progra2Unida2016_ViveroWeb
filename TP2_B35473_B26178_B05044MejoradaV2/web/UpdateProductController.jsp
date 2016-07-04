@@ -17,7 +17,6 @@
     CartManager cm = CartManager.getInstance();
     Product newProduct = mx.getProductById(idp);
     Product p = mx.getProductById(idp);
-System.out.print("= " + "Actualizar".equals(Uvalue));
     if ("Actualizar".equals(Uvalue)) {
         cm.updateProduct(amount, p);
     } else if ("Eliminar".equals(Uvalue)) {

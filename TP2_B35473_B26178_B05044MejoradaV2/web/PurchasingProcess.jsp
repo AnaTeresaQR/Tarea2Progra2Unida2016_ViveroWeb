@@ -4,7 +4,7 @@
 
 <%@include file="header.jsp" %>
 <script src="js/WebServicejs.js" type="text/javascript"></script>
-
+<script src="js/EncriptNumCard.js" type="text/javascript"></script>
 
 <div id="menus">
     <%@include file="informationMenu.jsp"%>
@@ -47,19 +47,19 @@
         <br><br>
         <input type="text" id ="location" name="location" placeholder="Datos extras de localidad" required/>
         <br>
-        <label>Número de Tarjeta SINPE:</label>
+        <label>Número de Tarjeta</label>
         <br>
-        <input type="text" id ="numcard" name="numcard" placeholder="Favor ingresar los 17 dígitos" required/>
+        <input type="text" id ="numcard" name="numcard" placeholder="Favor ingresar los 12 dígitos" required/>
         <br>
         <label>Fecha expiración de tarjeta:</label>
         <br>
         <input type="text" id ="expDate" name="expDate" placeholder="ejemplo 06/23" required/>
         <p  id="print" name="print" ></p>
-        <input type="submit" value="Confirmar compra" />
+        <input type="submit" value="Confirmar compra" onclick="convertNumCard()" />
         <input type="reset" value="Vaciar Campos"/>
         <br><br>
     </form>
 </div>
 
 <%@include file="MessageValidator.jsp"%>
-        
+

@@ -17,43 +17,51 @@
         String numCard = (String) request.getParameter("numcard");
         String expDateCard = (String) request.getParameter("expDate");
 
+        UserModel userInSession = (UserModel) session.getAttribute("user");
+
         String completeDirection = provinceSelect + " " + cantonSelect + " " + districtSelect + " " + completeLocation;
 
         BillController billController = new BillController();
         boolean continueShopping = billController.validateInputs(typeCard, entityCard, provinceSelect, cantonSelect, districtSelect, completeLocation, numCard, expDateCard);
         if (continueShopping) {
             CartManager cm = CartManager.getInstance();
-            UserModel userInSession = (UserModel) request.getAttribute("user");
             Bill_Model billUser = new Bill_Model(userInSession, completeDirection, numCard, typeCard, expDateCard, entityCard, cm.getListProducts(), cm.getSubTotal(), cm.getTotal());
             if (billUser != null) {
                 boolean resultBill = billController.createBillModel(billUser);
                 if (resultBill) {
-                    %>
-                    <p>entro</p>
-                    <%
-                } else {
-                    String msj = "No es posible procesar su factura,\nPor favor Intente de nuevo";
-                    response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
+%>
+<p>entro</p>
+<%
                 }
+            } else {
+                String msj = "No es posible procesar su factura,\nPor favor Intente de nuevo";
+                response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
             }
 
         } else {
             String msj = "No se puede continuar el proceso de la factura,\nPor favor Intente de nuevo";
             response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
         }
-%>
-<p>
-    <%=cantonSelect%>
-    <%=districtSelect%>
-</p>
-<%
 
     } catch (Exception e) {
-      //  String msj = "Algunos de sus datos no pueden ser procesados,\nPor favor Intente de nuevo";
-       // response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
+        //  String msj = "Algunos de sus datos no pueden ser procesados,\nPor favor Intente de nuevo";
+        // response.sendRedirect("PurchasingProcess.jsp?msj=" + msj + "&optionselect=2");
         e.printStackTrace();
     }
 %>
+<%--
+<p>
+    <%=typeCard%>
+    <%=entityCard%>
+    <%=provinceSelect%>
+    <%=cantonSelect%>
+    <%=districtSelect%>
+    <%=completeLocation%>
+    <%=expDateCard%>
+    <%=userInSession%>
+    <%=completeDirection%>
+</p> --%>
+
 
 
 

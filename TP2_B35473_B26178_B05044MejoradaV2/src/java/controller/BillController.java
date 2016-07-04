@@ -1,7 +1,10 @@
 package controller;
 
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import objectModel.Bill_Model;
+import objectModel.UserModel;
 
 /**
  *
@@ -14,8 +17,13 @@ public class BillController {
     public boolean createBillModel(Bill_Model newBill) throws SQLException {
         billModel = new Bill_Model();
         billModel = newBill;
-      //  System.out.println("BILLCONtroller = " + billModel.toString() + billModel.getUser().getId());
-        return billModel.createModel();
+        int id = billModel.createModel();
+        if (id != 0) {
+            billModel.setId(id);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean validateInputs(String typeCard, String entityCard,
@@ -30,4 +38,19 @@ public class BillController {
             return false;
         }
     }
+
+    public static void main(String[] args) {
+        try {
+            BillController billController = new BillController();
+            UserModel user = new UserModel(23, "Juan Miguel", "Arias Mejías", "207441378", "84590688", "juan2@gmail.com", "Juan123");
+            Bill_Model billUser = new Bill_Model(user, "san ramoooon", "12352634555", "VISA", "23/07", "BCR", "8 pera, 7 manzanas", 200120, 129133);
+
+            System.out.println("boolean: " + billController.createBillModel(billUser));
+
+            System.out.println("" + billUser.getId());
+        } catch (SQLException ex) {
+            Logger.getLogger(BillController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }
