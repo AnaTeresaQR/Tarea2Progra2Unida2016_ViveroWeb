@@ -21,7 +21,7 @@ public class PlantsController {
         return plantsManager.deleteProductById(plantId);
     }
 
-    public boolean buyPlant(String plantId, String amount) {
-        return plantsManager.buyProductById(plantId, amount);
-    }
+//    public boolean buyPlant(String plantId, String amount) {
+//        return plantsManager.buyProductById(plantId, amount);
+//    }
 }

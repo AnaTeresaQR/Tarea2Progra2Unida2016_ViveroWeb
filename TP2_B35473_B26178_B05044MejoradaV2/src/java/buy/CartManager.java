@@ -100,7 +100,7 @@ public class CartManager {
     public String getListProducts() {
         String productsList = "";
         for (int i = 0; i < products.size(); i++) {
-            productsList += quantity.get(i) + " " + products.get(i).getName() + " " + getSubTotalProduct(i) + "\n";
+            productsList += quantity.get(i) + " " + products.get(i).getName() + " " + getSubTotalProduct(i) + ", ";
         }
         return productsList;
     }

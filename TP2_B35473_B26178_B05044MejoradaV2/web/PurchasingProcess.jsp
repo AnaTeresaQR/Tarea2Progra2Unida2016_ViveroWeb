@@ -49,7 +49,7 @@
         <br>
         <label>Número de Tarjeta</label>
         <br>
-        <input type="text" id ="numcard" name="numcard" placeholder="Favor ingresar los 12 dígitos" required oninput="NumCardSize(this)"/>
+        <input type="text" id ="numcard" name="numcard" placeholder="Favor ingresar los 12 dígitos" required/>
         <br>
         <label>Fecha expiración de tarjeta:</label>
         <br>

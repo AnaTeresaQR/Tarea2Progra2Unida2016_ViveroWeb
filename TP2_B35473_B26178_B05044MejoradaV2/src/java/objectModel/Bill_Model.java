@@ -3,6 +3,7 @@ package objectModel;
 import DataBase.BillTableManager;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -41,6 +42,12 @@ public class Bill_Model {
         this.total = total;
     }
 
+    public Bill_Model(int id, Date billDate, String products) {
+        this.id = id;
+        this.billDate = billDate;
+        this.products = products;
+    }
+
     public Bill_Model(UserModel user, String addressUser, String numCard, String typeCard, String dateExp, String creditInstitution, String products, double subtotal, double total) {
         this.user = user;
         this.addressUser = addressUser;
@@ -65,6 +72,10 @@ public class Bill_Model {
         } catch (SQLException ex) {
             return 0;
         }
+    }
+
+    public ArrayList<Bill_Model> previewBills(int id) throws SQLException {
+        return dataBaseManager.getPreviewFromUserID(id);
     }
 
     public int getId() {

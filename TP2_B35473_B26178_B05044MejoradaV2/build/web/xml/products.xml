@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<products>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><products>
     <product category="Plantas Medicinales" productId="1">
         <name>Albahaca</name>
         <shortDescription>Anestésico y problemas estomacales</shortDescription>
@@ -236,8 +235,8 @@
         <shortDescription>Árbol maderable nombrada como la Reina de las Maderas por su apariencia y la capacidad de no dañarse a lo largo del tiempo</shortDescription>
         <longDescription>La madera de teca es de albura blanquecina y duramen amarillento o broncíneo. La fibra es generalmente recta. Posee un tacto aceitoso y recién cortada tiene un fuerte olor que desaparece en gran medida al secarse.</longDescription>
         <price>10000</price>
-        <productSold>0</productSold>
-        <productForSell>10</productForSell>
+        <productSold>10</productSold>
+        <productForSell>0</productForSell>
         <urlPicture1>productsPicture/woodTrees/teca.jpg</urlPicture1>
         <urlPicture2>productsPicture/woodTrees/teca2.jpg</urlPicture2>
         <urlPicture3>productsPicture/woodTrees/teca3.jpg</urlPicture3>

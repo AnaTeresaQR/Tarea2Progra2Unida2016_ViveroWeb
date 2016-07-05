@@ -145,3 +145,13 @@ textarea {
     height: 18%;
 
 }
+
+#ellipsis {
+    margin-left: 30%;
+    white-space: nowrap;
+    width: 15em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+       border: 1px ;
+    
+}

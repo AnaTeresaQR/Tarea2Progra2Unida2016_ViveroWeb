@@ -1,3 +1,4 @@
+<%@page import="xmlProducts.ProductsXmlManager"%>
 <%@page import="buy.CartManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -17,6 +18,8 @@
 </div>
 
 <%    CartManager cm = CartManager.getInstance();
+    ProductsXmlManager manager = new ProductsXmlManager(getServletContext().getRealPath("xml/products.xml"));
+    manager.buyProductById(cm.getProductsCart(), cm.getQuantityCart());
     cm.clean();
     
 %>
