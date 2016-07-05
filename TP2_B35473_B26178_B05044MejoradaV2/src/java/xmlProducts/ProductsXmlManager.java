@@ -32,6 +32,7 @@ public class ProductsXmlManager {
     private DocumentBuilder builder;
     private Document xmlDocument;
     private XPath xPath;
+
     public ProductsXmlManager() {
         loadFile();
     }
@@ -156,7 +157,7 @@ public class ProductsXmlManager {
         return null;
     }
 
-    public boolean updatePlantById(String productId, String newName, String newCategory, String newShortDecription, String newLongDescription,String newProductsForSell, String newPrice, String newImage1, String newImage2, String newImage3) {
+    public boolean updatePlantById(String productId, String newName, String newCategory, String newShortDecription, String newLongDescription, String newProductsForSell, String newPrice, String newImage1, String newImage2, String newImage3) {
         try {
             String expression = String.format("/products/product[@productId='%s']", productId);
             Node node = (Node) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODE);
@@ -193,44 +194,49 @@ public class ProductsXmlManager {
         return false;
     }
 
-    public boolean buyProductById(String productId, String amountProductsSold) {
+    public boolean buyProductById(List<Product> productId, List<Integer> amountProductsSold) {
         try {
-            String expression = String.format("/products/product[@productId='%s']", productId);
-            Node node = (Node) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODE);
+            for (int i = 0; i < productId.size(); i++) {
+                String id = productId.get(i).getProductId();
+                int amount = amountProductsSold.get(i);
 
-            if (node != null) {
-                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                String expression = String.format("/products/product[@productId='%s']", id);
+                Node node = (Node) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODE);
 
-                    Element element = (Element) node;
+                if (node != null) {
+                    if (node.getNodeType() == Node.ELEMENT_NODE) {
 
-                    int plantsSold = Integer.parseInt(element
-                            .getElementsByTagName("productSold").item(0).getChildNodes()
-                            .item(0).getNodeValue());
+                        Element element = (Element) node;
 
-                    int plantsForSell = Integer.parseInt(element
-                            .getElementsByTagName("productForSell").item(0).getChildNodes()
-                            .item(0).getNodeValue());
+                        int plantsSold = Integer.parseInt(element
+                                .getElementsByTagName("productSold").item(0).getChildNodes()
+                                .item(0).getNodeValue());
 
-                    if (plantsForSell >= Integer.parseInt(amountProductsSold)) {
-                        plantsSold += Integer.parseInt(amountProductsSold);
-                        plantsForSell -= Integer.parseInt(amountProductsSold);
-                        String newPlantsSold = plantsSold + "";
-                        String newPlantsForSell = plantsForSell + "";
+                        int plantsForSell = Integer.parseInt(element
+                                .getElementsByTagName("productForSell").item(0).getChildNodes()
+                                .item(0).getNodeValue());
 
-                        element.getElementsByTagName("productSold").item(0).getChildNodes().item(0).setNodeValue(newPlantsSold);
-                        element.getElementsByTagName("productForSell").item(0).getChildNodes().item(0).setNodeValue(newPlantsForSell);
+                        if (plantsForSell >= Integer.parseInt(amount + "")) {
+                            plantsSold += Integer.parseInt(amount + "");
+                            plantsForSell -= Integer.parseInt(amount + "");
+                            String newPlantsSold = plantsSold + "";
+                            String newPlantsForSell = plantsForSell + "";
 
-                        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-                        Transformer transformer = transformerFactory.newTransformer();
-                        DOMSource domSource = new DOMSource(xmlDocument);
+                            element.getElementsByTagName("productSold").item(0).getChildNodes().item(0).setNodeValue(newPlantsSold);
+                            element.getElementsByTagName("productForSell").item(0).getChildNodes().item(0).setNodeValue(newPlantsForSell);
 
-                        StreamResult streamResult = new StreamResult(new File(xmlFile));
-                        transformer.transform(domSource, streamResult);
-                        return true;
+                            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                            Transformer transformer = transformerFactory.newTransformer();
+                            DOMSource domSource = new DOMSource(xmlDocument);
+
+                            StreamResult streamResult = new StreamResult(new File(xmlFile));
+                            transformer.transform(domSource, streamResult);
+
+                        }
                     }
                 }
-                return false;
             }
+            return true;
         } catch (XPathExpressionException ex) {
             System.err.println("buyProduct method, XPathExpressionException: " + ex.getMessage() + "\n" + Arrays.toString(ex.getStackTrace()));
         } catch (TransformerException ex) {
