@@ -1,6 +1,7 @@
 package controller;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import objectModel.Bill_Model;
@@ -23,6 +24,21 @@ public class BillController {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public ArrayList<Bill_Model> previewBills(int id) {
+        try {
+            billModel = new Bill_Model();
+            ArrayList<Bill_Model> tempList = new ArrayList<>();
+            tempList = billModel.previewBills(id);
+            if (tempList.isEmpty()) {
+                return null;
+            } else {
+                return tempList;
+            }
+        } catch (SQLException ex) {
+            return null;
         }
     }
 
